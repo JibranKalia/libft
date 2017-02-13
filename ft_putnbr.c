@@ -1,5 +1,4 @@
-#include <nbr.h> 
-#include <chr.h> 
+#include <libft.h> 
 
 void	ft_putnbr(int n)
 {
