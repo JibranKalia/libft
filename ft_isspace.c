@@ -1,4 +1,5 @@
 int		ft_isspace(char c)
 {
-	return (c == ' ' ? 1 : 0)
+	return ((c == ' ' || c == '\t' || c == '\n' || 
+				c == '\v' || c == '\f' || c == '\r') ? 1 : 0);
 }

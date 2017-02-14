@@ -1,7 +1,6 @@
 #include <ctype.h> 
 #include <stdio.h> 
-
-int		ft_isdigit(char c);
+#include "libft.h"
 
 int	main (void)
 {
@@ -9,19 +8,19 @@ int	main (void)
 	int		test_output;
 
 	int		i;
-	char	testarray[35] = {"!@#$%^&*()_+|}{:?<>ABCXYZabcxyz  "};
 
 	i = -1;
-	while (testarray[++i])
+	while (++i < 127)
 	{
-		bench_output = isdigit(testarray[i]);
-		test_output = ft_isdigit(testarray[i]);
+		bench_output = iscntrl(i);
+		test_output = ft_iscntrl(i);
 		if (bench_output != test_output)
 		{
+			printf("Expected %d. Output %d\n", bench_output, test_output);
 			printf("Test %d = Error\n", i);
 			break ;
 		}
 	}
-	printf("is_aplha: SUCCESS\n");
+	printf("is_cntrl: SUCCESS\n");
 	return (0);
 }

@@ -1,6 +1,4 @@
-#include <libft.h> 
-
-int		ft_iscntrl(char c)
+int		ft_iscntrl(int c)
 {
-	return ((c <= 32 || c == 127) ? 1 : 0);
+	return (((c >= 0 && c < 32) || c == 127) ? 1 : 0);
 }
