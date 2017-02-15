@@ -1,6 +1,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <string.h> 
+
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
 
@@ -19,5 +21,7 @@ int		ft_isupper(int c);
 int		ft_isxdigit(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif

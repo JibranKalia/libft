@@ -16,6 +16,7 @@ SRC = ft_isalnum.c \
 	  ft_isxdigit.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
+	  ft_memcpy.c \
 	
 TEST = test_ctype.c
 
