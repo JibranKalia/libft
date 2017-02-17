@@ -24,6 +24,7 @@ SRC = ft_putchar.c \
 	  ft_memchr.c \
 	  ft_memmove.c \
 	  ft_bzero.c \
+	  ft_memcmp.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
@@ -45,13 +46,13 @@ $(NAME): $(OBJ)
 
 clean: 
 	@rm -f $(OBJ)
-	@echo "Removed Object Files"
+	@echo "\033[32mRemoved Object Files\033[0m"
 
 fclean: clean
 	@rm -f $(NAME) a.out
-	@echo "Removed Compiled Files" 
+	@echo "\033[32mRemoved Compiled Files.\033[0m" 
 
-re: fclean all
+re: fclean all 
 
 test: all 
 	@rm -f test
