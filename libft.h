@@ -5,6 +5,7 @@
 
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
+int		ft_strcmp(const char *src1, const char *src2);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);
@@ -24,5 +25,6 @@ int		ft_toupper(int c);
 
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	ft_bzero(void *src, size_t n);
 
 #endif

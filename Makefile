@@ -1,7 +1,10 @@
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_isalnum.c \
+SRC = ft_putchar.c \
+	  ft_strcmp.c \
+	  ft_putnbr.c \
+	  ft_isalnum.c \
 	  ft_isalpha.c \
 	  ft_isascii.c \
 	  ft_isblank.c \
@@ -18,6 +21,7 @@ SRC = ft_isalnum.c \
 	  ft_toupper.c \
 	  ft_memcpy.c \
 	  ft_memmove.c \
+	  ft_bzero.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
@@ -55,4 +59,7 @@ test: all
 	@echo "${YELLOW}Running Test2: Memcpy and Memmove${NC}"
 	@gcc -Wall -Wextra -Werror test_memmove.c -L. -lft -o test2
 	@./test2
-	@rm -f test1 test2
+	@echo "${YELLOW}Running Test3: Bzero${NC}"
+	@gcc -Wall -Wextra -Werror test_bzero.c -L. -lft -o test3
+	@./test3
+	@rm -f test1 test2 test3

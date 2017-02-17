@@ -1,6 +1,8 @@
 # Compiled source #
 ###################
 *.o
+*.a
+*.out
 
 # OS generated files #
 ######################
@@ -14,4 +16,4 @@ Thumbs.db
 
 # Vim Backup Files # 
 ####################
-.swp
+*.swp
