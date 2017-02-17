@@ -39,6 +39,20 @@ int		main(void)
 		printf("Function Output:	%s\n", dst4);
 	}
 
+	// MEMCCHR TESTS
+	char *output1 = (char*) memchr(csrc, 'f', 10);
+	char *output2 = (char*) ft_memchr(csrc, 'f', 10);
+
+	if (ft_strcmp(output1, output2) == 0 && flag == 1)
+		flag = 1;
+	else if (ft_strcmp(output1, output2) != 0)
+	{
+		flag = 0;
+		printf("Expected Output:	%s\n", output1);
+		printf("Function Output:	%s\n", output2);
+		printf("\e[0;31mMemcchr FAILED\e[0m\n");
+	}
+
 	// MEMMOVE TESTS
 	memmove(csrc1 + 5, csrc1, 10);
 	ft_memmove(csrc2 + 5, csrc2, 10);
