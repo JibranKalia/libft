@@ -26,6 +26,7 @@ int		ft_toupper(int c);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memccpy(void *dst, const void *src, int src_c, size_t len);
-void	ft_bzero(void *src, size_t n);
+void	*ft_memchr(const void *src, int src_c, size_t len);
+void	ft_bzero(void *src, size_t len);
 
 #endif
