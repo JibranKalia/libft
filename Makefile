@@ -20,6 +20,7 @@ SRC = ft_putchar.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_memcpy.c \
+	  ft_memccpy.c \
 	  ft_memmove.c \
 	  ft_bzero.c \
 
@@ -56,7 +57,7 @@ test: all
 	@echo "${YELLOW}Running Test1: Ctype Functions${NC}"
 	@gcc -Wall -Wextra -Werror test_ctype.c -L. -lft -o test1
 	@./test1
-	@echo "${YELLOW}Running Test2: Memcpy and Memmove${NC}"
+	@echo "${YELLOW}Running Test2: Memcpy, Memccpy, Memmove${NC}"
 	@gcc -Wall -Wextra -Werror test_memmove.c -L. -lft -o test2
 	@./test2
 	@echo "${YELLOW}Running Test3: Bzero${NC}"
