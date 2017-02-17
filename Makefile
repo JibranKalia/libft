@@ -18,9 +18,11 @@ SRC = ft_isalnum.c \
 	  ft_toupper.c \
 	  ft_memcpy.c \
 	  ft_memmove.c \
-	
-TEST = test_ctype.c
 
+RED 	= \033[0;31m
+YELLOW 	= \033[0;33m
+NC		= \033[0m
+		
 .PHONY = all clean
 
 OBJ = $(SRC:.c=.o)
@@ -40,13 +42,17 @@ clean:
 	@echo "Removed Object Files"
 
 fclean: clean
-	@rm -f $(NAME) test a.out
+	@rm -f $(NAME) a.out
 	@echo "Removed Compiled Files" 
 
 re: fclean all
 
 test: all 
 	@rm -f test
-	@gcc -Wall -Wextra -Werror $(TEST) -L. -lft -o test
-	./test
-
+	@echo "${YELLOW}Running Test1: Ctype Functions${NC}"
+	@gcc -Wall -Wextra -Werror test_ctype.c -L. -lft -o test1
+	@./test1
+	@echo "${YELLOW}Running Test2: Memcpy and Memmove${NC}"
+	@gcc -Wall -Wextra -Werror test_memmove.c -L. -lft -o test2
+	@./test2
+	@rm -f test1 test2
