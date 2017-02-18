@@ -4,6 +4,7 @@
 # include <string.h> 
 
 void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr(int n);
 int		ft_strcmp(const char *src1, const char *src2);
 int		ft_strncmp(const char *src1, const char *src2, size_t len);
@@ -43,5 +44,6 @@ void	ft_bzero(void *src, size_t len);
 void	*ft_memset(void *src, int c, size_t len);
 
 int		ft_atoi(const char *str);
+int		ft_abs(int i);
 
 #endif

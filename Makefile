@@ -2,6 +2,7 @@ NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_putchar.c \
+	  ft_putchar_fd.c \
 	  ft_strcmp.c \
 	  ft_putnbr.c \
 	  ft_isalnum.c \
@@ -38,6 +39,7 @@ SRC = ft_putchar.c \
 	  ft_strndup.c \
 	  ft_strchr.c \
 	  ft_atoi.c \
+	  ft_abs.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
