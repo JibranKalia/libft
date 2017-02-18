@@ -37,6 +37,7 @@ SRC = ft_putchar.c \
 	  ft_strdup.c \
 	  ft_strndup.c \
 	  ft_strchr.c \
+	  ft_atoi.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
@@ -77,7 +78,10 @@ test: all
 	@echo "${YELLOW}Test3: Bzero${NC}"
 	@gcc -Wall -Wextra -Werror test_bzero.c -L. -lft -o test3
 	@./test3
-	@echo "${YELLOW}Test4: Strcat${NC}"
+	@echo "${YELLOW}Test4: String Tests${NC}"
 	@gcc -Wall -Wextra -Werror test_str.c -L. -lft -o test4
 	@./test4
-	@rm -f test1 test2 test3 test4
+	@echo "${YELLOW}Test5: Number Tests${NC}"
+	@gcc -Wall -Wextra -Werror test_nbr.c -L. -lft -o test5
+	@./test5
+	@rm -f test1 test2 test3 test4 test5
