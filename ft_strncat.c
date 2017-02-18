@@ -2,12 +2,13 @@
 
 char	*ft_strncat(char *dst, const char *src, size_t len)
 {
+	char	*orig;
+	orig = dst;
 	while (*dst)
 		dst++;
-
-	while (*src && len-- > 0)
+	len++;
+	while (*src && --len > 0)
 		*dst++ = *src++;
 	*dst = '\0';
-
-	return (dst);
+	return (orig);
 }

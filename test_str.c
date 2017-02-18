@@ -70,6 +70,35 @@ int		main(void)
 		err_flag = 1;
 	}
 
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+    char *str2 = "yolo !";
+    char buff1[0xF00] = "there is no stars in the sky";
+    char *r1 = __builtin___strcat_chk (buff1, str, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
+    char *r2 = ft_strcat(buff1, str);
+    if (r1 != r2)
+	{
+		printf("Expected:	%s\n", r1);
+		printf("Output: 	%s\n", r2);
+		printf("\033[0;31mSTRCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
+    char buff2[0xF00] = "yolo";
+    r1 = __builtin___strcat_chk (buff2, str, __builtin_object_size (buff2, 2 > 1 ? 1 : 0));
+    r2 = ft_strcat(buff2, str);
+    if (r1 != r2)
+	{
+		printf("\033[0;31mSTRCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
+    char buff3[0xF00] = "";
+    r1 = __builtin___strcat_chk (buff3, str2, __builtin_object_size (buff3, 2 > 1 ? 1 : 0));
+    r2 = ft_strcat(buff3, str2);
+    if (r1 != r2)
+	{
+		printf("\033[0;31mSTRCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
+	
 	//STRDUP TEST
 	char	*output1 = strdup(src);
 	char	*output2 = ft_strdup(src);
@@ -101,6 +130,26 @@ int		main(void)
 		}
 	}
 
+	str = "the cake is a lie !\0I'm hidden lol\r\n";
+    char buff5[0xF00] = "there is no stars in the sky";
+    size_t max = 5;
+    r1 = __builtin___strncat_chk (buff5, str, max, __builtin_object_size (buff5, 2 > 1 ? 1 : 0));
+    r2 = ft_strncat(buff5, str, max);
+    if (r1 != r2)
+	{
+		printf("%s\n", r1);
+		printf("%s\n", r2);
+		printf("\033[0;31mSTRNCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
+    char buff4[0xF0] = "AAA";
+    r1 = __builtin___strncat_chk (buff4, "BBB", 1, __builtin_object_size (buff4, 2 > 1 ? 1 : 0));
+    r2 = ft_strncat(buff4, "BBB", 1);
+    if (r1 != r2)
+	{
+		printf("\033[0;31mSTRNCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
 	//STRCPY TEST
 	strcpy(src5, src);
 	ft_strcpy(src6, src);

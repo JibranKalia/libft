@@ -1,10 +1,17 @@
-char	*ft_strcat(char *src1, const char *src2)
+char	*ft_strcat(char *dst, const char *src)
 {
-	while (*src1)
-		src1++;
+	char	*orig;
 
-	while (*src2)
-		*src1++ = *src2++;
+	orig = dst;
+	while (*dst)
+		dst++;
+	while (*src)
+	{
+		*dst = *src;
+		dst++;
+		src++;
+	}
+	*dst = '\0';
 
-	return (src1);
+	return (orig);
 }
