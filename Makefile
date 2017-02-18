@@ -26,6 +26,9 @@ SRC = ft_putchar.c \
 	  ft_bzero.c \
 	  ft_memset.c \
 	  ft_memcmp.c \
+	  ft_strcat.c \
+	  ft_strncat.c \
+	  ft_strlen.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
@@ -66,4 +69,7 @@ test: all
 	@echo "${YELLOW}Test3: Bzero${NC}"
 	@gcc -Wall -Wextra -Werror test_bzero.c -L. -lft -o test3
 	@./test3
-	@rm -f test1 test2 test3
+	@echo "${YELLOW}Test4: Strcat${NC}"
+	@gcc -Wall -Wextra -Werror test_str.c -L. -lft -o test4
+	@./test4
+	@rm -f test1 test2 test3 test4
