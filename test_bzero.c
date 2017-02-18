@@ -20,7 +20,7 @@ int		main(void)
 	ft_bzero(str2, len);
 	
 	if (ft_strcmplen(str1, str2, len) == 0)
-		printf("Bzero PASSED\n");
+		printf("\033[0;32mBzero Passed\n\033[0m");
 	else
 		printf("Bzero FAILED\n");
 	return (0);

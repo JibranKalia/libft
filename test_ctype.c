@@ -40,6 +40,6 @@ int	main (void)
 		if (toupper(i) != ft_toupper(i))
 			printf("ERROR to_upper ASCII: %d\n", i);
 	}
-	printf("If no error message CTYPE TESTS pass.\n");
+	printf("\033[0;32mCTYPE TESTS pass if no error^^^\033[0m\n");
 	return (0);
 }

@@ -113,9 +113,9 @@ int		main(void)
 	}
 
 	if (mem_flag == 1)
-		printf("All Mem Test Passed\n");
+		printf("\033[0;32mMEM Tests Passed\n\033[0m");
 	else 
-		printf("Failed Mem Test\n");
+		printf("\033[0;31mFailed Mem Test\n\033[0m");
 
 	return (0);
 }

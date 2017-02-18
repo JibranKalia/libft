@@ -8,7 +8,10 @@ int		main(void)
 	char 	src2[20] = "!@#Ja09~";
 	char 	src3[20] = "!@#Ja09~";
 	char 	src4[20] = "!@#Ja09~";
-
+	char	src5[20];
+	char	src6[20];
+	char	src7[20] = "AAAAAAAAAAAAAA";
+	char	src8[20] = "AAAAAAAAAAAAAA";
 
 	int		err_flag = 0;
 
@@ -21,6 +24,17 @@ int		main(void)
 		err_flag = 1;
 	}
 
+	//STRCPY TEST
+	strcpy(src5, src);
+	ft_strcpy(src6, src);
+	strcpy(src7, src);
+	ft_strcpy(src8, src);
+	if (strcmp(src5, src6) != 0 || strcmp(src7, src8))
+	{
+		printf("\033[0;31mSTRCPY FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
 	//STRCHR TEST
 	char *dest1 = strchr(src, 'a');
 	char *dest2 = ft_strchr(src, 'a');
@@ -28,7 +42,7 @@ int		main(void)
 	char *dest4 = ft_strchr(src, '\0');
 	if (strcmp(dest1, dest2) != 0 || strcmp(dest3, dest4))
 	{
-		printf("STRCAT FAILED\n");
+		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
 		err_flag = 1;
 	}
 	
@@ -37,19 +51,17 @@ int		main(void)
 	ft_strncat(src4, src, 4);
 	if (strcmp(src3, src4) != 0)
 	{
-		printf("STRCAT FAILED\n");
+		printf("\033[0;31mSTRCAT FAILED\033[0m\n");
 		err_flag = 1;
 	}
 
 	//STRLEN TEST
 	if (strlen(src) != ft_strlen(src))
 	{
-		printf("STRLEN FAILED\n");
+		printf("\033[0;31mSTRLEN FAILED\033[0m\n");
 		err_flag = 1;
 	}
 
-
-
 	if (err_flag != 1)
-		printf("Passed all STR Tests\n");
+		printf("\033[0;32mSTR Tests Passed\033[0m\n");
 }
