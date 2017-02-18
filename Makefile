@@ -24,6 +24,7 @@ SRC = ft_putchar.c \
 	  ft_memchr.c \
 	  ft_memmove.c \
 	  ft_bzero.c \
+	  ft_memset.c \
 	  ft_memcmp.c \
 
 RED 	= \033[0;31m
@@ -56,13 +57,13 @@ re: fclean all
 
 test: all 
 	@rm -f test
-	@echo "${YELLOW}Running Test1: Ctype Functions${NC}"
+	@echo "${YELLOW}Test1: Ctype Functions${NC}"
 	@gcc -Wall -Wextra -Werror test_ctype.c -L. -lft -o test1
 	@./test1
-	@echo "${YELLOW}Running Test2: Memcpy, Memcmp, Memccpy, Memmove${NC}"
+	@echo "${YELLOW}Test2: Memset, Memchr, Memcpy, Memcmp, Memccpy, Memmove${NC}"
 	@gcc -Wall -Wextra -Werror test_mem.c -L. -lft -o test2
 	@./test2
-	@echo "${YELLOW}Running Test3: Bzero${NC}"
+	@echo "${YELLOW}Test3: Bzero${NC}"
 	@gcc -Wall -Wextra -Werror test_bzero.c -L. -lft -o test3
 	@./test3
 	@rm -f test1 test2 test3

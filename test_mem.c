@@ -18,6 +18,8 @@ int		main(void)
 	char 	dst2[20];
 	char	dst3[20];
 	char	dst4[20];
+	char	dst5[30] = "AAAAAAAAAAAAAAAAAAAAA";
+	char	dst6[30] = "AAAAAAAAAAAAAAAAAAAAA";
 
 	// MEMCPY TESTS
 	memcpy(dst1, csrc, 10);
@@ -30,7 +32,19 @@ int		main(void)
 		mem_flag = 0;
 		printf("Memcpy FAILED\n");
 	}
-	
+
+	//MEMSET TESTS
+	memset(dst5, 'f', 7);
+	ft_memset(dst6, 'f', 7);
+
+	if (ft_strcmp(dst5, dst6) == 0)
+		mem_flag = 1;
+	else
+	{
+		mem_flag = 0;
+		printf("Memset FAILED\n");
+	}
+
 	// MEMCMP TESTS
 	int cmp_flag = 0;
 	if (memcmp(csrc1, csrc, 10) != ft_memcmp(csrc1, csrc, 10))
@@ -66,7 +80,7 @@ int		main(void)
 		printf("Function Output:	%s\n", dst4);
 	}
 
-	// MEMCCHR TESTS
+	// MEMCHR TESTS
 	const char *output1 = (char*)memchr(csrc, 'f', 10);
 	const char *output2 = (char*)ft_memchr(csrc, 'f', 10);
 	const char *output3 = (char*) memchr(csrc, 'k', 2);
