@@ -3,11 +3,13 @@
 
 void	*ft_memmove(void *dst, const void* src, size_t len)
 {
-    unsigned char *csrc;
-    unsigned char *cdst;
+    const unsigned char	*csrc;
+    unsigned char 		*cdst;
+	unsigned char		*final;
     
-    csrc = (unsigned char*)src;
+    csrc = (const unsigned char*)src;
     cdst = (unsigned char*)dst;
+	final = cdst;
 	if (cdst > csrc)
 	{
 		csrc = csrc + len - 1;
@@ -20,5 +22,5 @@ void	*ft_memmove(void *dst, const void* src, size_t len)
 		while (len-- > 0)
 			*cdst++ = *csrc++;
 	}
-	return (cdst);
+	return (final);
 }

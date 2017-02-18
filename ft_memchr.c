@@ -2,12 +2,14 @@
 
 void	*ft_memchr(const void *src, int src_c, size_t len)
 {
-	const char		*csrc;
-	csrc = (const char*)src;
+	const unsigned char		*csrc;
+	unsigned char			to_find;
+	to_find = (unsigned char)src_c;
+	csrc = (const unsigned char*)src;
 
 	while(len-- > 0)
 	{
-		if (*csrc++ == (unsigned char)src_c)
+		if (*csrc++ == to_find)
 			return ((void*)csrc - 1);
 	}
 	return (NULL);

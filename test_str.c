@@ -127,6 +127,15 @@ int		main(void)
 	}
 
 	//STRCHR TEST
+	char *srcB = "/|\x12\xff\x09\x42\2002\42|\\";
+    int size = 10;
+
+    if (memchr(srcB, '\200', size) != ft_memchr(srcB, '\200', size))
+	{
+		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
 	char *dest1 = strchr(src, 'a');
 	char *dest2 = ft_strchr(src, 'a');
 	char *dest3 = strchr(src, '\0');
