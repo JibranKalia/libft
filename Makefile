@@ -28,10 +28,10 @@ SRC = ft_putchar.c \
 	  ft_memcmp.c \
 	  ft_strcat.c \
 	  ft_strncat.c \
+	  ft_strlcat.c \
 	  ft_strlen.c \
 	  ft_strcpy.c \
 	  ft_strncpy.c \
-	  ft_strlcpy.c \
 	  ft_strdup.c \
 	  ft_strchr.c \
 
