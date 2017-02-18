@@ -4,6 +4,7 @@
 int		main(void)
 {
 	char 	src[20] = "!@#Ja09~";
+	char 	srcA[20] = "";
 	char 	src1[20] = "!@#Ja09~";
 	char 	src2[20] = "!@#Ja09~";
 	char 	src3[20] = "!@#Ja09~";
@@ -20,7 +21,18 @@ int		main(void)
 	ft_strcat(src2, src);
 	if (strcmp(src1, src2) != 0)
 	{
-		printf("STRCAT FAILED\n");
+		printf("\033[0;31mSTRCAT FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
+	//STRDUP TEST
+	char	*output1 = strdup(src);
+	char	*output2 = ft_strdup(src);
+	if (strcmp(output1, output2) != 0 || strcmp(strdup(srcA), ft_strdup(srcA)) != 0)
+	{
+		printf("%s\n", output1);
+		printf("%s\n", output2);
+		printf("\033[0;31mSTRCDUP FAILED\033[0m\n");
 		err_flag = 1;
 	}
 
