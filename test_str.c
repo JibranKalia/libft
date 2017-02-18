@@ -13,6 +13,12 @@ int		main(void)
 	char	src6[20];
 	char	src7[20] = "AAAAAAAAAAAAAA";
 	char	src8[20] = "AAAAAAAAAAAAAA";
+	char	src9[20];
+	char	src10[20];
+	char	src11[20] = "AAAAAAAAAAAAAA";
+	char	src12[20] = "AAAAAAAAAAAAAA";
+	char	src13[20];
+	char	src14[20];
 
 	int		err_flag = 0;
 
@@ -44,6 +50,20 @@ int		main(void)
 	if (strcmp(src5, src6) != 0 || strcmp(src7, src8))
 	{
 		printf("\033[0;31mSTRCPY FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
+	//STRNCPY TEST
+	strncpy(src9, src, 7);
+	ft_strncpy(src10, src, 7);
+	strncpy(src11, src, 0);
+	ft_strncpy(src12, src, 0);
+	strncpy(src13, src, 15);
+	ft_strncpy(src14, src, 15);
+	if (strcmp(src9, src10) != 0 || strcmp(src11, src12) != 0
+			|| strcmp(src13, src14) != 0)
+	{
+		printf("\033[0;31mSTRNCPY FAILED\033[0m\n");
 		err_flag = 1;
 	}
 
