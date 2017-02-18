@@ -93,7 +93,6 @@ int		main(void)
 		printf("\033[0;31mSTRLEN FAILED\033[0m\n");
 		err_flag = 1;
 	}
-
 	if (err_flag != 1)
 		printf("\033[0;32mSTR Tests Passed\033[0m\n");
 }
