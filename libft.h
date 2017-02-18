@@ -6,6 +6,7 @@
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
 int		ft_strcmp(const char *src1, const char *src2);
+int		ft_strncmp(const char *src1, const char *src2, size_t len);
 char	*ft_strcat(char *src1, const char *src2);
 char	*ft_strncat(char *src1, const char *src2, size_t len);
 size_t	ft_strlcat(char *src1, const char *src2, size_t size);

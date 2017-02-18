@@ -25,6 +25,41 @@ int		main(void)
 	char	src18[20] = "aAA";
 
 	int		err_flag = 0;
+	
+	//STRCMP TEST
+	
+	int		ret1 = strcmp(src8, src18);
+	int		ret2 = ft_strcmp(src8, src18);
+	int		ret3 = strcmp(src2, src3);
+	int		ret4 = ft_strcmp(src2, src3);
+
+	if ((ret1 != ret2) || (ret3 != ret4))
+	{
+		printf("\033[0;31mSTRCMP FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
+	//STRNCMP TEST
+	int		ret5;
+	int		ret6;
+	int 	ret7;
+	int		ret8;
+	int		i_strncmp = -1;
+
+	while (++i_strncmp < 20)
+	{
+		ret5 = strncmp(src8, src18, i_strncmp);
+		ret6 = ft_strncmp(src8, src18, i_strncmp);
+		ret7 = strncmp(src2, src3, i_strncmp);
+		ret8  = ft_strncmp(src2, src3, i_strncmp);
+		
+		if ((ret1 != ret2) || (ret3 != ret4))
+		{
+			printf("\033[0;31mSTRnCMP FAILED\033[0m\n");
+			err_flag = 1;
+			break ;
+		}
+	}
 
 	//STRCAT TEST
 	strcat(src1, src);
