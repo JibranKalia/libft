@@ -169,6 +169,18 @@ int		main(void)
 		printf("\033[0;31mSTRLEN FAILED\033[0m\n");
 		err_flag = 1;
 	}
+	//STRNLEN TEST
+	int	i_strnlen = -1;
+
+	while (++i_strnlen > 0)
+	{
+		if (strnlen(src, i_strnlen) != ft_strnlen(src, i_strnlen))
+		{
+			printf("\033[0;31mSTRNLEN FAILED\033[0m\n");
+			err_flag = 1;
+		}
+	}
+
 	if (err_flag != 1)
 		printf("\033[0;32mSTR Tests Passed\033[0m\n");
 }

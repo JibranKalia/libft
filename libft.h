@@ -11,6 +11,7 @@ char	*ft_strcat(char *src1, const char *src2);
 char	*ft_strncat(char *src1, const char *src2, size_t len);
 size_t	ft_strlcat(char *src1, const char *src2, size_t size);
 size_t	ft_strlen(const char *src);
+size_t	ft_strnlen(const char *src, size_t maxlen);
 char	*ft_strchr(const char *src, int c);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
