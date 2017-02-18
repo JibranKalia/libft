@@ -33,7 +33,7 @@ int		main(void)
 	
 	// MEMCMP TESTS
 	int cmp_flag = 0;
-	if (memcmp(dst1, csrc, 10) != ft_memcmp(dst2, csrc, 10))
+	if (memcmp(csrc1, csrc, 10) != ft_memcmp(csrc1, csrc, 10))
 		printf("\e[0;31mMemcmp Test%d FAILED\e[0m\n", cmp_flag = 1);
 	if (memcmp(csrcA, csrcB, 10) != ft_memcmp(csrcA, csrcB, 10))
 		printf("\e[0;31mMemcmp Test%d FAILED\e[0m\n", cmp_flag = 2);

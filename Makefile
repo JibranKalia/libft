@@ -59,7 +59,7 @@ test: all
 	@echo "${YELLOW}Running Test1: Ctype Functions${NC}"
 	@gcc -Wall -Wextra -Werror test_ctype.c -L. -lft -o test1
 	@./test1
-	@echo "${YELLOW}Running Test2: Memcpy, Memccpy, Memmove${NC}"
+	@echo "${YELLOW}Running Test2: Memcpy, Memcmp, Memccpy, Memmove${NC}"
 	@gcc -Wall -Wextra -Werror test_mem.c -L. -lft -o test2
 	@./test2
 	@echo "${YELLOW}Running Test3: Bzero${NC}"
