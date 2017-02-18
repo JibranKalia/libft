@@ -34,6 +34,7 @@ SRC = ft_putchar.c \
 	  ft_strcpy.c \
 	  ft_strncpy.c \
 	  ft_strdup.c \
+	  ft_strndup.c \
 	  ft_strchr.c \
 
 RED 	= \033[0;31m

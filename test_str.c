@@ -81,6 +81,26 @@ int		main(void)
 		err_flag = 1;
 	}
 
+	//STRNDUP TEST
+
+	int		i_strndup = -1;
+	char	*output3 = strdup(src);
+	char	*output4 = ft_strdup(src);
+
+	while (++i_strndup < 20)
+	{
+		output3 = strndup(src, i_strndup);
+		output4 = ft_strndup(src, i_strndup);
+		if (strcmp(output1, output2) != 0 ||
+				strcmp(strndup(srcA, i_strndup), ft_strndup(srcA, i_strndup)) != 0)
+		{
+			printf("%s\n", output1);
+			printf("%s\n", output2);
+			printf("\033[0;31mSTRNDUP FAILED\033[0m\n");
+			err_flag = 1;
+		}
+	}
+
 	//STRCPY TEST
 	strcpy(src5, src);
 	ft_strcpy(src6, src);

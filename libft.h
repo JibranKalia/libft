@@ -15,6 +15,7 @@ char	*ft_strchr(const char *src, int c);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(const char *src);
+char	*ft_strndup(const char *src, size_t len);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);
