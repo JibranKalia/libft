@@ -83,7 +83,10 @@ test: all
 	@echo "${YELLOW}Test4: String Tests${NC}"
 	@gcc -Wall -Wextra -Werror test_str.c -L. -lft -o test4
 	@./test4
-	@echo "${YELLOW}Test5: Number Tests${NC}"
-	@gcc -Wall -Wextra -Werror test_nbr.c -L. -lft -o test5
+	@echo "${YELLOW}Test5: Strlcat Test${NC}"
+	@gcc -Wall -Wextra -Werror test_strlcat.c -L. -lft -o test5
 	@./test5
-	@rm -f test1 test2 test3 test4 test5
+	@echo "${YELLOW}Test6: Number Tests${NC}"
+	@gcc -Wall -Wextra -Werror test_nbr.c -L. -lft -o test6
+	@./test6
+	@rm -f test1 test2 test3 test4 test5 test6

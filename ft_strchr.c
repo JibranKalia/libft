@@ -3,12 +3,15 @@
 char	*ft_strchr(const char *src, int c)
 {
 	unsigned char	to_find;
-	to_find = (unsigned char)c;
+	char			*csrc;
 
-	while (*src++)
+	csrc = 	(char*)src;
+	to_find = (unsigned char)c;
+	while (csrc)
 	{
-		if (*src == to_find)
-			return ((char*)src);
+		if (*csrc == to_find)
+			return (csrc);
+		csrc++;
 	}
 	return (NULL);
 }

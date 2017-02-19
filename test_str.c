@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include "libft.h"
 
+int		test_strchr()
+{
+	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+    char *d1 = strchr(src, 't');
+    char *d2 = ft_strchr(src, 't');
+
+    if (d1 == d2)
+		return (0);
+	return (1);
+}
+
 int		main(void)
 {
 	char 	src[20] = "!@#Ja09~";
@@ -190,6 +201,12 @@ int		main(void)
 	char *dest3 = strchr(src, '\0');
 	char *dest4 = ft_strchr(src, '\0');
 	if (strcmp(dest1, dest2) != 0 || strcmp(dest3, dest4))
+	{
+		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
+		err_flag = 1;
+	}
+
+	if (test_strchr() == 1)
 	{
 		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
 		err_flag = 1;

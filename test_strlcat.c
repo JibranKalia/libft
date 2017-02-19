@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	strlcmp_test1(void)
+int	strlcat_test1(void)
 {
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "there is no stars in the sky";
@@ -18,7 +19,7 @@ void	strlcmp_test1(void)
 		printf("Expected: 	%s\n", buff1);
 		printf("Printed:	%s\n", buff2);
 		printf("-----------------------------------------------------------------\n");
-		return ;
+		return (1);
 	}
     char s1[4] = "";
     char s2[4] = "";
@@ -33,12 +34,12 @@ void	strlcmp_test1(void)
 		printf("Expected: 	%s\n", buff1);
 		printf("Printed:	%s\n", buff2);
 		printf("-----------------------------------------------------------------\n");
-		return ;
+		return (1);
 	}
-    printf("Test1: SUCCESS\n");
+	return (0);
 }
 
-void	strlcmp_test2(void)
+int	strlcat_test2(void)
 {
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "there is no stars in the sky";
@@ -48,18 +49,16 @@ void	strlcmp_test2(void)
     __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
-	{
-        printf("Test2: SUCCESS\n");
-		return ;
-	}
+		return (0);
     printf("Test2: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
+	return (1);
 }
 
-void	strlcmp_test3(void)
+int	strlcat_test3(void)
 {
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "there is no stars in the sky";
@@ -69,18 +68,16 @@ void	strlcmp_test3(void)
     __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
-	{
-		printf("Test3: SUCCESS\n");
-		return ;
-	}
+		return (0);
 	printf("Test3: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
+	return (1);
 }
 
-void	strlcmp_test4(void)
+int	strlcat_test4(void)
 {
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "there is no stars in the sky";
@@ -90,21 +87,18 @@ void	strlcmp_test4(void)
     __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
-	{
-		printf("Test4: SUCCESS\n");
-		return ;
-	}
+		return (0);
 	printf("Test4: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
-	return ;
+	return (1);
 }
 
-void	strlcmp_test5(void)
+int	strlcat_test5(void)
 {
-	    char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "there is no stars in the sky";
     char buff2[0xF00] = "there is no stars in the sky";
     size_t max = 1000;
@@ -112,20 +106,17 @@ void	strlcmp_test5(void)
     __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
-	{
-		printf("Test5: SUCCESS\n");
-		return ;
-	}
+		return (0);
 	printf("Test5: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
-	return ;
+	return (1);
 
 }
 
-void	strlcmp_test6(void)
+int	strlcat_test6(void)
 {
 	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
     char buff1[0xF00] = "";
@@ -135,20 +126,17 @@ void	strlcmp_test6(void)
     __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
-	{
-	 printf("Test6: SUCCESS\n");
-	 return ;
- 	}
+	 return (0);
 	printf("Test6: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
-	return ;
+	return (1);
 }
 
 
-void	strlcmp_test7(void)
+int	strlcat_test7(void)
 {
 	    char *str = "n\0AA";
     char buff1[0xF00] = "\0AAAAAAAAAAAAAAAA";
@@ -159,18 +147,17 @@ void	strlcmp_test7(void)
     ft_strlcat(buff2, str, max);
     if (!strcmp(buff1, buff2))
 	{
-		printf("Test7: SUCCESS\n");
-		return ;
+		return (0);
 	}
 	printf("Test7: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%s\n", buff1);
 	printf("Printed:	%s\n", buff2);
 	printf("-----------------------------------------------------------------\n");
-	return ;
+	return (1);
 }
 
-void	strlcmp_test8(void)
+int	strlcat_test8(void)
 {
 	char *src = "aaa";
     char dst1[20];
@@ -188,25 +175,38 @@ void	strlcmp_test8(void)
     ret2 = ft_strlcat(dst2, src, 20);
     if (ret1 == ret2)
 	{
-		printf("Test8: SUCCESS\n");
-		return ;
+		return (0);
 	}
 	printf("Test8: FAIL\n");
 	printf("-----------------------------------------------------------------\n");
 	printf("Expected: 	%d\n", ret1);
 	printf("Printed:	%d\n", ret2);
 	printf("-----------------------------------------------------------------\n");
+	return (1);
 }
 
 int		main (void)
 {
-	strlcmp_test1();
-	strlcmp_test2();
-	strlcmp_test3();
-	strlcmp_test4();
-	strlcmp_test5();
-	strlcmp_test6();
-	strlcmp_test7();
-	strlcmp_test8();
+	int	err_flag = 0;
+	if (strlcat_test1() == 1)
+		err_flag = 1;
+	if (strlcat_test2() == 1)
+		err_flag = 1;
+	if (strlcat_test3() == 1)
+		err_flag = 1;
+	if (strlcat_test4() == 1)
+		err_flag = 1;
+	if (strlcat_test5() == 1)
+		err_flag = 1;
+	if (strlcat_test6() == 1)
+		err_flag = 1;
+	if (strlcat_test7() == 1)
+		err_flag = 1;
+	if (strlcat_test8() == 1)
+		err_flag = 1;
+
+	if (err_flag == 0)
+		printf("\033[0;32mSTRLCAT test PASS\033[03m\n");
+
 	return (0);
 }
