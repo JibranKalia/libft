@@ -6,6 +6,10 @@
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr(int n);
+void	ft_putstr(char const *src);
+void	ft_putstr_fd(char const *src, int fd);
+void	ft_putendl(char const *src);
+void	ft_putendl_fd(char const *src, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_strcmp(const char *src1, const char *src2);
 int		ft_strncmp(const char *src1, const char *src2, size_t len);
@@ -21,6 +25,11 @@ char	*ft_strdup(const char *src);
 char	*ft_strndup(const char *src, size_t len);
 char	*ft_strstr(const char *src, const char* to_find);
 char	*ft_strnstr(const char *src, const char* to_find, size_t n);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *src);
+void 	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);
@@ -45,6 +54,8 @@ void	*ft_memchr(const void *src, int src_c, size_t len);
 int		ft_memcmp(const void *src1, const void *src2, size_t len);
 void	ft_bzero(void *src, size_t len);
 void	*ft_memset(void *src, int c, size_t len);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 
 int		ft_atoi(const char *str);
 int		ft_abs(int i);
