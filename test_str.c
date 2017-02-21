@@ -1,7 +1,80 @@
 #include <stdio.h>
 #include "libft.h"
 
-int		test_strchr()
+int		test_strstr1()
+{
+	char *src = "aaabbbaaabbb";
+    char *d1 = strstr(src, "abbaaab");
+    char *d2 = ft_strstr(src, "abbaaab");
+
+    if (d1 == d2)
+		return(0);
+	printf("Test1: \n");
+	printf("Expected: %s\n", d1);
+	printf("Expected: %s\n", d2);
+	return(1);
+}
+
+int		test_strstr2()
+{
+	char *src = "the ca cake is a lie !\0I'm hidden lol\r\n";
+    char *d1 = strstr(src, "cake");
+    char *d2 = ft_strstr(src, "cake");
+
+    if (d1 == d2)
+		return (0);
+	printf("Test2: \n");
+	printf("Expected: %s\n", d1);
+	printf("Expected: %s\n", d2);
+	return (1);
+}
+
+int		test_strstr3()
+{
+	char *s2 = "FF";
+    char *s1 = "see F your F return FF now FF";
+    char *i1 = strstr(s1, s2);
+    char *i2 = ft_strstr(s1, s2);
+
+    if (i1 == i2)
+		return (0);
+	printf("Expected: %s\n", i1);
+	printf("Printed: %s\n", i2);
+    return (1);
+}
+
+int		test_strstr4()
+{
+	char *s1 = "";
+    char *s2 = "";
+    char *i1 = strstr(s1, s2);
+    char *i2 = ft_strstr(s1, s2);
+
+    if (i1 == i2)
+		return (0);
+
+	printf("Test4: \n");
+	printf("Expected: %s\n", i1);
+	printf("Printed: %s\n", i2);
+    return (1);
+}
+
+int		test_strstr5()
+{
+	char *s1 = "MZIRIBMZIRIBMZP";
+    char *s2 = "MZIRIBMZP";
+    char *i1 = strstr(s1, s2);
+    char *i2 = ft_strstr(s1, s2);
+
+    if (i1 == i2)
+		return (0);
+	printf("Test5: \n");
+	printf("Expected: %s\n", i1);
+	printf("Printed: %s\n", i2);
+    return (1);
+}
+
+int		test_strchr1()
 {
 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
     char *d1 = strchr(src, 't');
@@ -12,6 +85,43 @@ int		test_strchr()
 	return (1);
 }
 
+int		test_strchr2()
+{
+	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+    char *d1 = strchr(src, 'x');
+    char *d2 = ft_strchr(src, 'x');
+
+    if (d1 == d2)
+		return (0);
+	printf("Expected:	%s\n", d1);
+	printf("Output:		%s\n", d2);
+	return (1);
+}
+
+int		test_strchr3()
+{
+	char *src = "Ä«Å<93>Ë<99>Ë<80>Ë<98>Â¯Ë<87>Â¸Â¯.Å<93>Â«â<80><98>â<80><93>â<80><93>â<84>¢Âªâ<80>¢Â¡Â¶Â¢Ë<9c>Ë<80>";
+    char *d1 = strchr(src, '<80>');
+    char *d2 = ft_strchr(src, '<80>');
+
+    if (d1 == d2)
+		return (0);
+	return (1);
+}
+
+int		test_strchr4()
+{
+	char *src = "\0";
+    char *d1 = strchr(src, 'a');
+    char *d2 = ft_strchr(src, 'a');
+
+    if (d1 == d2)	
+		return (0);
+	printf("Expected:	%s\n", d1);
+	printf("Output:		%s\n", d2);
+	return (1);
+
+}
 int		main(void)
 {
 	char 	src[20] = "!@#Ja09~";
@@ -205,12 +315,55 @@ int		main(void)
 		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
 		err_flag = 1;
 	}
-
-	if (test_strchr() == 1)
+	if (test_strchr1() == 1)
 	{
-		printf("\033[0;31mSTRCHR FAILED\033[0m\n");
+		printf("\033[0;31mSTRCHR FAILED Test1\033[0m\n");
 		err_flag = 1;
 	}
+	if (test_strchr2() == 1)
+	{
+		printf("\033[0;31mSTRCHR FAILED Test2\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strchr3() == 1)
+	{
+		printf("\033[0;31mSTRCHR FAILED Test3\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strchr4() == 1)
+	{
+		printf("\033[0;31mSTRCHR FAILED Test4\033[0m\n");
+		err_flag = 1;
+	}
+	
+	//STRSTR TEST
+	if (test_strstr1() == 1)
+	{
+		printf("\033[0;31mSTRSTR FAILED Test1\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strstr2() == 1)
+	{
+		printf("\033[0;31mSTRSTR FAILED Test2\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strstr3() == 1)
+	{
+		printf("\033[0;31mSTRSTR FAILED Test3\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strstr4() == 1)
+	{
+		printf("\033[0;31mSTRSTR FAILED Test4\033[0m\n");
+		err_flag = 1;
+	}
+	if (test_strstr5() == 1)
+	{
+		printf("\033[0;31mSTRSTR FAILED Test5\033[0m\n");
+		err_flag = 1;
+	}
+	
+	
 	
 	//STRNCAT TEST
 	strncat(src3, src, 4);

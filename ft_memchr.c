@@ -10,7 +10,7 @@ void	*ft_memchr(const void *src, int src_c, size_t len)
 	while(len-- > 0)
 	{
 		if (*csrc++ == to_find)
-			return ((void*)csrc - 1);
+			return ((void*)(csrc - 1));
 	}
 	return (NULL);
 }

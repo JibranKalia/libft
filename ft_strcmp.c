@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int		ft_strcmp(const char *src1, const char *src2)
 {
 	while (*src1 == *src2)
