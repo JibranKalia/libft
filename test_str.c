@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h> 
+#include <wchar.h>
 #include "libft.h"
 
 int		test_strstr1()
@@ -362,8 +364,6 @@ int		main(void)
 		printf("\033[0;31mSTRSTR FAILED Test5\033[0m\n");
 		err_flag = 1;
 	}
-	
-	
 	
 	//STRNCAT TEST
 	strncat(src3, src, 4);

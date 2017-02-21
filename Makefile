@@ -9,6 +9,7 @@ SRC = ft_putchar.c \
 	  ft_putchar_fd.c \
 	  ft_strcmp.c \
 	  ft_putnbr.c \
+	  ft_putnbr_fd.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
 	  ft_isascii.c \
@@ -76,7 +77,7 @@ fclean: clean
 
 re: fclean all 
 
-test: re 
+test: all 
 	@rm -f test
 	@echo "${YELLOW}Test1: Ctype Functions${NC}"
 	@gcc $(CFLAGS) test_ctype.c -L. -lft -o test1
