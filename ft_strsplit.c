@@ -1,83 +1,85 @@
 #include "libft.h"
-#include <stdlib.h> 
+#include <stdlib.h>
+#include <stdbool.h>
 
-int		num_block(char const *src, char c)
-{
-	int		i; 
-
-	i = (*src != c) ? 1 : 0;
-	while (*src)
-	{
-		if (*src == c && *(src + 1) != c)
-			i++;
-		src++;
-	}
-	return (i);
-}
-
-int		len_block(char const *src, char c)
+static void	tbl_del(char **src)
 {
 	int 	i;
 
 	i = 0;
-	while (*src == c && *src)
-		src++;
-	while (*src != c && *src)
+	while(src[i])
 	{
-		src++;
-		i++;
+		free(src[i]);
+		++i;
+	}
+	free(src);
+}
+
+static int	num_block(char const *src, char c)
+{
+	int		i;
+	int 	wrd_flag;
+
+	wrd_flag = 0;
+	i = 0;
+    while (*src)
+	{
+		if (*src == c)
+			wrd_flag = 0;
+		else
+		{
+			if (wrd_flag == 0)
+				++i;
+			wrd_flag = 1;
+		}
+        ++src;
 	}
 	return (i);
 }
 
-char *each_block(char const *src, char c, int *len)
+static char	*each_block(char const *src, char c)
 {
-	int		i;
-	int		j;
+    int 	len;
+	int 	i;
 	char	*ret;
-	char	*orig;
-	
-	i = len_block(src, c);
-	j = 0;
-	ret = (char*)malloc(sizeof(char) * (i + 1));
-	if (ret == NULL)
-		return (0);
-	orig = ret;
-	while (*src == c && *src)
+
+	len = 0;
+	i = 0;
+	while(src[len] != c && src[len])
+		++len;
+	CHK((ret = (char*)malloc(sizeof(char) * (len + 1))) == 0, 0);
+	while (i < len)
 	{
-		j++;
-		src++;
+		ret[i] =  src[i];
+		++i;
 	}
-	while (*src != c && *src)
-	{
-		*ret = *src;
-		j++;
-		src++;
-		ret++;
-	}
-	*len = j;
-	*ret = '\0';
-	return (orig);
+    ret[i] = 0;
+	return (ret);
 }
 
-char **ft_strsplit(char const *src, char c)
+char		**ft_strsplit(char const *src, char c)
 {
-	int 	len1;
-	int		len2;
+	int		num_b;
+	int		i;
 	char	**ret;
-	char	**orig;
+	bool	wrd_flag;
 
-	len1 = num_block(src, c);
-	len2 = 0;
-	ret = (char**)malloc(sizeof(char*) * (len1 + 2));
-	if (ret == NULL)
-		return (0);
-	orig = ret;
+	i = 0;
+	wrd_flag = 0;
+	num_b = num_block(src, c);
+	CHK(src == 0, 0);
+	CHK((ret = (char**)ft_memalloc(sizeof(char*) * (num_b + 1))) == 0, 0);
 	while (*src)
 	{
-		*ret = each_block(src, c, &len2);
-		src = src + len2; 
-		ret++;
+		if (*src == c)
+			wrd_flag = 0;
+		else
+		{
+			if (wrd_flag == 0)
+				CHK1((ret[i++] = each_block(src, c)) == 0, tbl_del(ret), 0);
+			wrd_flag = 1;
+		}
+		++src;
 	}
-	return (orig);
+	return (ret);
 }
