@@ -3,6 +3,8 @@
 
 # include <string.h> 
 
+#  define CHK(a, b) do{if(a){return(b);}}while(0)
+#  define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr(int n);
@@ -30,6 +32,8 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *src);
 void 	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	**ft_strsplit(const char *src, char c);
+char	**strsplit(const char *src, char src_x);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);
