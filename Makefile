@@ -60,7 +60,6 @@ SRC = ft_putchar.c \
 	  ft_strsplit.c \
 	  ft_atoi.c \
 	  ft_abs.c \
-	  ft_habibstr.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m

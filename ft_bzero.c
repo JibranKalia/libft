@@ -1,7 +1,18 @@
-#include "libft.h"
-#include "stdio.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/02/27 11:07:51 by jkalia            #+#    #+#             */
+/*   Updated: 2017/02/27 11:08:29 by jkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_bzero(void	*src, size_t len)
+#include "libft.h"
+
+void	ft_bzero(void *src, size_t len)
 {
 	unsigned char	*tmp_src;
 
