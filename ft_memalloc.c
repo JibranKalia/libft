@@ -6,9 +6,8 @@ void	*ft_memalloc(size_t size)
 	void			*tmp1;
 	unsigned char	*tmp2;
 
-	tmp1 = malloc(size);
-	if (!tmp1)
-		return (NULL);
+	CHK(size == 0, 0);
+	CHK((tmp1 = malloc(size)) == 0, 0);
 	tmp2 = (unsigned char*)tmp1;
 	while (size--)
 		*tmp2++ = 0;
