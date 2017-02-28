@@ -1526,6 +1526,33 @@ ft_strndup.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strndup.c.s
 .PHONY : ft_strndup.c.s
 
+ft_strnequ.o: ft_strnequ.c.o
+
+.PHONY : ft_strnequ.o
+
+# target to build an object file
+ft_strnequ.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strnequ.c.o
+.PHONY : ft_strnequ.c.o
+
+ft_strnequ.i: ft_strnequ.c.i
+
+.PHONY : ft_strnequ.i
+
+# target to preprocess a source file
+ft_strnequ.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strnequ.c.i
+.PHONY : ft_strnequ.c.i
+
+ft_strnequ.s: ft_strnequ.c.s
+
+.PHONY : ft_strnequ.s
+
+# target to generate assembly for a file
+ft_strnequ.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strnequ.c.s
+.PHONY : ft_strnequ.c.s
+
 ft_strnew.o: ft_strnew.c.o
 
 .PHONY : ft_strnew.o
@@ -1687,6 +1714,33 @@ ft_strstr.s: ft_strstr.c.s
 ft_strstr.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strstr.c.s
 .PHONY : ft_strstr.c.s
+
+ft_strsub.o: ft_strsub.c.o
+
+.PHONY : ft_strsub.o
+
+# target to build an object file
+ft_strsub.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strsub.c.o
+.PHONY : ft_strsub.c.o
+
+ft_strsub.i: ft_strsub.c.i
+
+.PHONY : ft_strsub.i
+
+# target to preprocess a source file
+ft_strsub.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strsub.c.i
+.PHONY : ft_strsub.c.i
+
+ft_strsub.s: ft_strsub.c.s
+
+.PHONY : ft_strsub.s
+
+# target to generate assembly for a file
+ft_strsub.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strsub.c.s
+.PHONY : ft_strsub.c.s
 
 ft_tolower.o: ft_tolower.c.o
 
@@ -1960,6 +2014,9 @@ help:
 	@echo "... ft_strndup.o"
 	@echo "... ft_strndup.i"
 	@echo "... ft_strndup.s"
+	@echo "... ft_strnequ.o"
+	@echo "... ft_strnequ.i"
+	@echo "... ft_strnequ.s"
 	@echo "... ft_strnew.o"
 	@echo "... ft_strnew.i"
 	@echo "... ft_strnew.s"
@@ -1978,6 +2035,9 @@ help:
 	@echo "... ft_strstr.o"
 	@echo "... ft_strstr.i"
 	@echo "... ft_strstr.s"
+	@echo "... ft_strsub.o"
+	@echo "... ft_strsub.i"
+	@echo "... ft_strsub.s"
 	@echo "... ft_tolower.o"
 	@echo "... ft_tolower.i"
 	@echo "... ft_tolower.s"

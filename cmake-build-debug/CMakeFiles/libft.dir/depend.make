@@ -118,6 +118,9 @@ CMakeFiles/libft.dir/ft_strlen.c.o: ../libft.h
 CMakeFiles/libft.dir/ft_strmap.c.o: ../ft_strmap.c
 CMakeFiles/libft.dir/ft_strmap.c.o: ../libft.h
 
+CMakeFiles/libft.dir/ft_strmapi.c.o: ../ft_strmapi.c
+CMakeFiles/libft.dir/ft_strmapi.c.o: ../libft.h
+
 CMakeFiles/libft.dir/ft_strncat.c.o: ../ft_strncat.c
 CMakeFiles/libft.dir/ft_strncat.c.o: ../libft.h
 
@@ -129,6 +132,9 @@ CMakeFiles/libft.dir/ft_strncpy.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_strndup.c.o: ../ft_strndup.c
 CMakeFiles/libft.dir/ft_strndup.c.o: ../libft.h
+
+CMakeFiles/libft.dir/ft_strnequ.c.o: ../ft_strnequ.c
+CMakeFiles/libft.dir/ft_strnequ.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_strnew.c.o: ../ft_strnew.c
 CMakeFiles/libft.dir/ft_strnew.c.o: ../libft.h
@@ -147,6 +153,9 @@ CMakeFiles/libft.dir/ft_strsplit.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_strstr.c.o: ../ft_strstr.c
 CMakeFiles/libft.dir/ft_strstr.c.o: ../libft.h
+
+CMakeFiles/libft.dir/ft_strsub.c.o: ../ft_strsub.c
+CMakeFiles/libft.dir/ft_strsub.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_tolower.c.o: ../ft_tolower.c
 

@@ -36,7 +36,10 @@ char	**ft_strsplit(const char *src, char c);
 char	**strsplit(const char *src, char src_x);
 
 int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t len);
 char	*ft_strmap(char const *src, char (*f)(char));
+char	*ft_strmapi(char const *src, char (*f)(unsigned int, char));
+char	*ft_strsub(char const *src, unsigned int start, size_t len);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);

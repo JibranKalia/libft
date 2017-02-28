@@ -118,6 +118,9 @@ CMakeFiles/libft.dir/ft_strlen.c.o
 CMakeFiles/libft.dir/ft_strmap.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strmap.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_strmapi.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_strmapi.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strncat.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strncat.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
@@ -129,6 +132,9 @@ CMakeFiles/libft.dir/ft_strncpy.c.o
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strndup.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strndup.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_strnequ.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_strnequ.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strnew.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strnew.c
@@ -147,6 +153,9 @@ CMakeFiles/libft.dir/ft_strsplit.c.o
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strstr.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strstr.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_strsub.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_strsub.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_tolower.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_tolower.c
