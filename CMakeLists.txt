@@ -59,8 +59,10 @@ set(SOURCE_FILES ft_putchar.c
         ft_strcmp.c
         libft.h
         ft_isnum.c
+        ft_strsub.c
         ft_strequ.c
         ft_strmap.c
+        ft_strnequ.c
         ft_strmapi.c
         )
 

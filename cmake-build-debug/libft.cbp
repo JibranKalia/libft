@@ -311,6 +311,9 @@
 		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_strndup.c">
 			<Option target="libft"/>
 		</Unit>
+		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_strnequ.c">
+			<Option target="libft"/>
+		</Unit>
 		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_strnew.c">
 			<Option target="libft"/>
 		</Unit>
@@ -327,6 +330,9 @@
 			<Option target="libft"/>
 		</Unit>
 		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_strstr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_strsub.c">
 			<Option target="libft"/>
 		</Unit>
 		<Unit filename="/nfs/2017/j/jkalia/Desktop/libft/ft_tolower.c">

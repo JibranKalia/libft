@@ -59,6 +59,8 @@ SRC = ft_putchar.c \
 	  ft_striteri.c \
 	  ft_strsplit.c \
 	  ft_strequ.c \
+	  ft_strnequ.c \
+	  ft_strsub.c \
 	  ft_strmap.c \
 	  ft_strmapi.c \
 	  ft_atoi.c \
