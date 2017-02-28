@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 11:43:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/02/27 11:43:58 by jkalia           ###   ########.fr       */
+/*   Created: 2017/02/27 16:52:47 by jkalia            #+#    #+#             */
+/*   Updated: 2017/02/27 16:52:49 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strequ(char const *src1, char const *src2)
+char	*ft_strsub(char const *src, unsigned int start, size_t len)
 {
-	CHK(src1 == 0 || src2 == 0, 0);
-	while (*src1 == *src2)
-	{
-		if (*src1 == '\0' && *src2 == '\0')
-			return (1);
-		src1++;
-		src2++;
-	}
-	return (0);
+	char	*sub;
+	int 	i;
+
+	i = 0;
+	CHK((sub = ft_strnew(len)) == NULL, NULL);
+	while (len-- > 0)
+		sub[i++] = src[start++];
+	return (sub);
 }
