@@ -64,6 +64,7 @@ set(SOURCE_FILES ft_putchar.c
         ft_strmap.c
         ft_strnequ.c
         ft_strmapi.c
+        ft_strjoin.c
         )
 
 set(CMAKE_C_STANDARD 90)
