@@ -53,6 +53,7 @@ set(SOURCE_FILES ft_putchar.c
         ft_striter.c
         ft_striteri.c
         ft_strsplit.c
+        ft_strtrim.c
         ft_atoi.c
         ft_abs.c
         ft_putendl.c
@@ -65,25 +66,28 @@ set(SOURCE_FILES ft_putchar.c
         ft_strnequ.c
         ft_strmapi.c
         ft_strjoin.c
+        ft_strtrim.c
         )
 
 set(CMAKE_C_STANDARD 90)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 add_library(libft ${SOURCE_FILES})
-add_executable(test1 test_ctype.c)
+#add_executable(test1 test_ctype.c)
 #add_executable(test2 test_strsplit.c ft_habibstr.c)
 #add_executable(test3 test_mem.c)
 #add_executable(test4 test_nbr.c)
 #add_executable(test5 test_bzero.c)
 #add_executable(test6 test_strlcat.c)
 #add_executable(test7 test_str.c)
-add_executable(test8 test_str2.c)
-target_link_libraries(test1 libft)
+#add_executable(test8 test_str2.c)
+add_executable(test9 test_strtrim.c)
+#target_link_libraries(test1 libft)
 #target_link_libraries(test2 libft)
 #target_link_libraries(test3 libft)
 #target_link_libraries(test4 libft)
 #target_link_libraries(test5 libft)
 #target_link_libraries(test6 libft)
 #target_link_libraries(test7 libft)
-target_link_libraries(test8 libft)
+#target_link_libraries(test8 libft)
+target_link_libraries(test9 libft)
 
