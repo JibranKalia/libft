@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test8
+
+# Build rule for target.
+test8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test8
+.PHONY : test8
+
+# fast build rule for target.
+test8/fast:
+	$(MAKE) -f CMakeFiles/test8.dir/build.make CMakeFiles/test8.dir/build
+.PHONY : test8/fast
+
+#=============================================================================
+# Target rules for targets named test1
+
+# Build rule for target.
+test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
+.PHONY : test1/fast
+
+#=============================================================================
 # Target rules for targets named libft
 
 # Build rule for target.
@@ -1203,6 +1229,33 @@ ft_strdup.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
 
+ft_strequ.o: ft_strequ.c.o
+
+.PHONY : ft_strequ.o
+
+# target to build an object file
+ft_strequ.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strequ.c.o
+.PHONY : ft_strequ.c.o
+
+ft_strequ.i: ft_strequ.c.i
+
+.PHONY : ft_strequ.i
+
+# target to preprocess a source file
+ft_strequ.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strequ.c.i
+.PHONY : ft_strequ.c.i
+
+ft_strequ.s: ft_strequ.c.s
+
+.PHONY : ft_strequ.s
+
+# target to generate assembly for a file
+ft_strequ.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strequ.c.s
+.PHONY : ft_strequ.c.s
+
 ft_striter.o: ft_striter.c.o
 
 .PHONY : ft_striter.o
@@ -1310,6 +1363,60 @@ ft_strlen.s: ft_strlen.c.s
 ft_strlen.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strlen.c.s
 .PHONY : ft_strlen.c.s
+
+ft_strmap.o: ft_strmap.c.o
+
+.PHONY : ft_strmap.o
+
+# target to build an object file
+ft_strmap.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmap.c.o
+.PHONY : ft_strmap.c.o
+
+ft_strmap.i: ft_strmap.c.i
+
+.PHONY : ft_strmap.i
+
+# target to preprocess a source file
+ft_strmap.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmap.c.i
+.PHONY : ft_strmap.c.i
+
+ft_strmap.s: ft_strmap.c.s
+
+.PHONY : ft_strmap.s
+
+# target to generate assembly for a file
+ft_strmap.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmap.c.s
+.PHONY : ft_strmap.c.s
+
+ft_strmapi.o: ft_strmapi.c.o
+
+.PHONY : ft_strmapi.o
+
+# target to build an object file
+ft_strmapi.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmapi.c.o
+.PHONY : ft_strmapi.c.o
+
+ft_strmapi.i: ft_strmapi.c.i
+
+.PHONY : ft_strmapi.i
+
+# target to preprocess a source file
+ft_strmapi.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmapi.c.i
+.PHONY : ft_strmapi.c.i
+
+ft_strmapi.s: ft_strmapi.c.s
+
+.PHONY : ft_strmapi.s
+
+# target to generate assembly for a file
+ft_strmapi.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_strmapi.c.s
+.PHONY : ft_strmapi.c.s
 
 ft_strncat.o: ft_strncat.c.o
 
@@ -1635,12 +1742,68 @@ ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_toupper.c.s
 .PHONY : ft_toupper.c.s
 
+test_ctype.o: test_ctype.c.o
+
+.PHONY : test_ctype.o
+
+# target to build an object file
+test_ctype.c.o:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test_ctype.c.o
+.PHONY : test_ctype.c.o
+
+test_ctype.i: test_ctype.c.i
+
+.PHONY : test_ctype.i
+
+# target to preprocess a source file
+test_ctype.c.i:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test_ctype.c.i
+.PHONY : test_ctype.c.i
+
+test_ctype.s: test_ctype.c.s
+
+.PHONY : test_ctype.s
+
+# target to generate assembly for a file
+test_ctype.c.s:
+	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/test_ctype.c.s
+.PHONY : test_ctype.c.s
+
+test_str2.o: test_str2.c.o
+
+.PHONY : test_str2.o
+
+# target to build an object file
+test_str2.c.o:
+	$(MAKE) -f CMakeFiles/test8.dir/build.make CMakeFiles/test8.dir/test_str2.c.o
+.PHONY : test_str2.c.o
+
+test_str2.i: test_str2.c.i
+
+.PHONY : test_str2.i
+
+# target to preprocess a source file
+test_str2.c.i:
+	$(MAKE) -f CMakeFiles/test8.dir/build.make CMakeFiles/test8.dir/test_str2.c.i
+.PHONY : test_str2.c.i
+
+test_str2.s: test_str2.c.s
+
+.PHONY : test_str2.s
+
+# target to generate assembly for a file
+test_str2.c.s:
+	$(MAKE) -f CMakeFiles/test8.dir/build.make CMakeFiles/test8.dir/test_str2.c.s
+.PHONY : test_str2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test8"
+	@echo "... test1"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... libft"
@@ -1764,6 +1927,9 @@ help:
 	@echo "... ft_strdup.o"
 	@echo "... ft_strdup.i"
 	@echo "... ft_strdup.s"
+	@echo "... ft_strequ.o"
+	@echo "... ft_strequ.i"
+	@echo "... ft_strequ.s"
 	@echo "... ft_striter.o"
 	@echo "... ft_striter.i"
 	@echo "... ft_striter.s"
@@ -1776,6 +1942,12 @@ help:
 	@echo "... ft_strlen.o"
 	@echo "... ft_strlen.i"
 	@echo "... ft_strlen.s"
+	@echo "... ft_strmap.o"
+	@echo "... ft_strmap.i"
+	@echo "... ft_strmap.s"
+	@echo "... ft_strmapi.o"
+	@echo "... ft_strmapi.i"
+	@echo "... ft_strmapi.s"
 	@echo "... ft_strncat.o"
 	@echo "... ft_strncat.i"
 	@echo "... ft_strncat.s"
@@ -1812,6 +1984,12 @@ help:
 	@echo "... ft_toupper.o"
 	@echo "... ft_toupper.i"
 	@echo "... ft_toupper.s"
+	@echo "... test_ctype.o"
+	@echo "... test_ctype.i"
+	@echo "... test_ctype.s"
+	@echo "... test_str2.o"
+	@echo "... test_str2.i"
+	@echo "... test_str2.s"
 .PHONY : help
 
 

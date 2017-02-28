@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 11:17:56 by jkalia            #+#    #+#             */
-/*   Updated: 2017/02/27 11:18:12 by jkalia           ###   ########.fr       */
+/*   Created: 2017/02/27 11:43:38 by jkalia            #+#    #+#             */
+/*   Updated: 2017/02/27 11:43:58 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_islower(int c)
+#include "libft.h"
+
+int		ft_strequ(char const *src1, char const *src2)
 {
-	return ((c >= 'a' && c <= 'z') ? 1 : 0);
+	while (ft_toupper(*src1) == ft_toupper(*src2))
+	{
+		if (*src1 == '\0' && *src2 == '\0')
+			return (1);
+		src1++;
+		src2++;
+	}
+	return (0);
 }

@@ -35,6 +35,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	**ft_strsplit(const char *src, char c);
 char	**strsplit(const char *src, char src_x);
 
+int		ft_strequ(char const *s1, char const *s2);
+char	*ft_strmap(char const *src, char (*f)(char));
+
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);
 int     ft_isascii(int c);

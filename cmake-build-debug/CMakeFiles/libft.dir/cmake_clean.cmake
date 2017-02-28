@@ -55,6 +55,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_abs.c.o"
   "CMakeFiles/libft.dir/ft_putendl.c.o"
   "CMakeFiles/libft.dir/ft_strcmp.c.o"
+  "CMakeFiles/libft.dir/ft_strequ.c.o"
+  "CMakeFiles/libft.dir/ft_strmap.c.o"
+  "CMakeFiles/libft.dir/ft_strmapi.c.o"
   "liblibft.pdb"
   "liblibft.a"
 )
