@@ -160,6 +160,10 @@ libft.h
 
 /nfs/2017/j/jkalia/Desktop/libft/ft_striteri.c
 
+/nfs/2017/j/jkalia/Desktop/libft/ft_strjoin.c
+libft.h
+/nfs/2017/j/jkalia/Desktop/libft/libft.h
+
 /nfs/2017/j/jkalia/Desktop/libft/ft_strlcat.c
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
@@ -231,6 +235,10 @@ libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
 
 /nfs/2017/j/jkalia/Desktop/libft/ft_strsub.c
+libft.h
+/nfs/2017/j/jkalia/Desktop/libft/libft.h
+
+/nfs/2017/j/jkalia/Desktop/libft/ft_strtrim.c
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
 

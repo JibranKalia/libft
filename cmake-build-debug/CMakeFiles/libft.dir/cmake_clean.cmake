@@ -51,6 +51,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_striter.c.o"
   "CMakeFiles/libft.dir/ft_striteri.c.o"
   "CMakeFiles/libft.dir/ft_strsplit.c.o"
+  "CMakeFiles/libft.dir/ft_strtrim.c.o"
   "CMakeFiles/libft.dir/ft_atoi.c.o"
   "CMakeFiles/libft.dir/ft_abs.c.o"
   "CMakeFiles/libft.dir/ft_putendl.c.o"
@@ -60,6 +61,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_strmap.c.o"
   "CMakeFiles/libft.dir/ft_strnequ.c.o"
   "CMakeFiles/libft.dir/ft_strmapi.c.o"
+  "CMakeFiles/libft.dir/ft_strjoin.c.o"
   "liblibft.pdb"
   "liblibft.a"
 )

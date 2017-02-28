@@ -109,6 +109,9 @@ CMakeFiles/libft.dir/ft_striter.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_striter.c
 CMakeFiles/libft.dir/ft_striteri.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_striteri.c
+CMakeFiles/libft.dir/ft_strjoin.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_strjoin.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strlcat.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strlcat.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
@@ -156,6 +159,9 @@ CMakeFiles/libft.dir/ft_strstr.c.o
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_strsub.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_strsub.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_strtrim.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_strtrim.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_tolower.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_tolower.c

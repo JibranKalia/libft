@@ -1,7 +1,6 @@
 #include "libft.h"
 
-
-int 	ft_strtrim1(void)
+int 	test_strtrim1(void)
 {
 	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
 	char *s2 = "Hello \t  Please\n Trim me !";
@@ -13,6 +12,5 @@ int 	ft_strtrim1(void)
 }
 int 	main(void)
 {
-	CHK1((ft_strtrim1()) == 0, ft_putstr("Error"), 0);
-
+	CHK1((test_strtrim1()) == 0, ft_putstr("Error\n"), 0);
 }

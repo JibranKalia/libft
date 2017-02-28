@@ -113,10 +113,10 @@ test: all
 	@echo "${YELLOW}Test5: Strlcat Test${NC}"
 	@gcc $(CFLAGS) test_strlcat.c -L. -lft -o test5
 	@./test5
-	@echo "${YELLOW}Test6: Strsplit Test${NC}"
-	@gcc $(CFLAGS) test_ftstrsplit.c -L. -lft -o test6
+	@echo "${YELLOW}Test6: Strnbr Test${NC}"
+	@gcc $(CFLAGS) test_nbr.c -L. -lft -o test6
 	@./test6
-	@echo "${YELLOW}Test7: Number Tests${NC}"
-	@gcc $(CFLAGS) test_nbr.c -L. -lft -o test7
+	@echo "${YELLOW}Test7: Strltrim Test${NC}"
+	@gcc $(CFLAGS) test_strtrim.c -L. -lft -o test7
 	@./test7
-	@rm -f test1 test2 test3 test4 test5 test6 test7
+	@rm -f test1 test2 test3 test4 test5 test6 

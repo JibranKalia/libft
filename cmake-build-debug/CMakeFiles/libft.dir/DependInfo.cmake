@@ -47,6 +47,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strequ.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strequ.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_striter.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_striter.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_striteri.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_striteri.c.o"
+  "/nfs/2017/j/jkalia/Desktop/libft/ft_strjoin.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strjoin.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strlcat.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strlcat.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strlen.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strlen.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strmap.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strmap.c.o"
@@ -63,6 +64,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strsplit.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strsplit.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strstr.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strstr.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_strsub.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strsub.c.o"
+  "/nfs/2017/j/jkalia/Desktop/libft/ft_strtrim.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_strtrim.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_tolower.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_tolower.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_toupper.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_toupper.c.o"
   )

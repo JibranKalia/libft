@@ -109,6 +109,9 @@ CMakeFiles/libft.dir/ft_striter.c.o: ../ft_striter.c
 
 CMakeFiles/libft.dir/ft_striteri.c.o: ../ft_striteri.c
 
+CMakeFiles/libft.dir/ft_strjoin.c.o: ../ft_strjoin.c
+CMakeFiles/libft.dir/ft_strjoin.c.o: ../libft.h
+
 CMakeFiles/libft.dir/ft_strlcat.c.o: ../ft_strlcat.c
 CMakeFiles/libft.dir/ft_strlcat.c.o: ../libft.h
 
@@ -156,6 +159,9 @@ CMakeFiles/libft.dir/ft_strstr.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_strsub.c.o: ../ft_strsub.c
 CMakeFiles/libft.dir/ft_strsub.c.o: ../libft.h
+
+CMakeFiles/libft.dir/ft_strtrim.c.o: ../ft_strtrim.c
+CMakeFiles/libft.dir/ft_strtrim.c.o: ../libft.h
 
 CMakeFiles/libft.dir/ft_tolower.c.o: ../ft_tolower.c
 

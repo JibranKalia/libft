@@ -41,6 +41,7 @@ char	*ft_strmap(char const *src, char (*f)(char));
 char	*ft_strmapi(char const *src, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *src1, char const *src2);
+char	*ft_strtrim(char const *src);
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int	c);

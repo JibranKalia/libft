@@ -48,7 +48,6 @@ int		str_test2(void)
 int		main(void)
 {
 	char 	**ret;
-	int 	i = 0;
 	int 	flag = 0;
 
 	//g_malloc_inject = 2;
