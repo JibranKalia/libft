@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2017/j/jkalia/Desktop/libft/ft_isspace.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_isspace.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_isupper.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_isupper.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_isxdigit.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_isxdigit.c.o"
+  "/nfs/2017/j/jkalia/Desktop/libft/ft_itoa.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_itoa.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_memalloc.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_memalloc.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_memccpy.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_memccpy.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_memchr.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_memchr.c.o"

@@ -38,6 +38,9 @@ CMakeFiles/libft.dir/ft_isupper.c.o: ../ft_isupper.c
 CMakeFiles/libft.dir/ft_isxdigit.c.o: ../ft_isxdigit.c
 CMakeFiles/libft.dir/ft_isxdigit.c.o: ../libft.h
 
+CMakeFiles/libft.dir/ft_itoa.c.o: ../ft_itoa.c
+CMakeFiles/libft.dir/ft_itoa.c.o: ../libft.h
+
 CMakeFiles/libft.dir/ft_memalloc.c.o: ../ft_memalloc.c
 CMakeFiles/libft.dir/ft_memalloc.c.o: ../libft.h
 

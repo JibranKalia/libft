@@ -71,6 +71,7 @@ void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 
 int		ft_atoi(const char *str);
+char	*ft_itoa(int nb);
 int		ft_abs(int i);
 
 #endif

@@ -62,6 +62,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_strnequ.c.o"
   "CMakeFiles/libft.dir/ft_strmapi.c.o"
   "CMakeFiles/libft.dir/ft_strjoin.c.o"
+  "CMakeFiles/libft.dir/ft_itoa.c.o"
   "liblibft.pdb"
   "liblibft.a"
 )

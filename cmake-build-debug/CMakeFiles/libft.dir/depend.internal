@@ -38,6 +38,9 @@ CMakeFiles/libft.dir/ft_isupper.c.o
 CMakeFiles/libft.dir/ft_isxdigit.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_isxdigit.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_itoa.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_itoa.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_memalloc.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_memalloc.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h

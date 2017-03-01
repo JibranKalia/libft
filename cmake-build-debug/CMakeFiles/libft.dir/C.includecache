@@ -46,6 +46,12 @@ libft.h
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
 
+/nfs/2017/j/jkalia/Desktop/libft/ft_itoa.c
+libft.h
+/nfs/2017/j/jkalia/Desktop/libft/libft.h
+stdio.h
+-
+
 /nfs/2017/j/jkalia/Desktop/libft/ft_memalloc.c
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
@@ -243,6 +249,10 @@ stdio.h
 -
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
+stdlib.h
+-
+unistd.h
+-
 
 /nfs/2017/j/jkalia/Desktop/libft/ft_tolower.c
 

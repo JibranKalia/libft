@@ -124,6 +124,19 @@ test9/fast:
 .PHONY : test9/fast
 
 #=============================================================================
+# Target rules for targets named test10
+
+# Build rule for target.
+test10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test10
+.PHONY : test10
+
+# fast build rule for target.
+test10/fast:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/build
+.PHONY : test10/fast
+
+#=============================================================================
 # Target rules for targets named libft
 
 # Build rule for target.
@@ -594,6 +607,33 @@ ft_isxdigit.s: ft_isxdigit.c.s
 ft_isxdigit.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_isxdigit.c.s
 .PHONY : ft_isxdigit.c.s
+
+ft_itoa.o: ft_itoa.c.o
+
+.PHONY : ft_itoa.o
+
+# target to build an object file
+ft_itoa.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_itoa.c.o
+.PHONY : ft_itoa.c.o
+
+ft_itoa.i: ft_itoa.c.i
+
+.PHONY : ft_itoa.i
+
+# target to preprocess a source file
+ft_itoa.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_itoa.c.i
+.PHONY : ft_itoa.c.i
+
+ft_itoa.s: ft_itoa.c.s
+
+.PHONY : ft_itoa.s
+
+# target to generate assembly for a file
+ft_itoa.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_itoa.c.s
+.PHONY : ft_itoa.c.s
 
 ft_memalloc.o: ft_memalloc.c.o
 
@@ -1837,6 +1877,33 @@ ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_toupper.c.s
 .PHONY : ft_toupper.c.s
 
+test_itoa.o: test_itoa.c.o
+
+.PHONY : test_itoa.o
+
+# target to build an object file
+test_itoa.c.o:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.o
+.PHONY : test_itoa.c.o
+
+test_itoa.i: test_itoa.c.i
+
+.PHONY : test_itoa.i
+
+# target to preprocess a source file
+test_itoa.c.i:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.i
+.PHONY : test_itoa.c.i
+
+test_itoa.s: test_itoa.c.s
+
+.PHONY : test_itoa.s
+
+# target to generate assembly for a file
+test_itoa.c.s:
+	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.s
+.PHONY : test_itoa.c.s
+
 test_strtrim.o: test_strtrim.c.o
 
 .PHONY : test_strtrim.o
@@ -1873,6 +1940,7 @@ help:
 	@echo "... test9"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test10"
 	@echo "... libft"
 	@echo "... ft_abs.o"
 	@echo "... ft_abs.i"
@@ -1925,6 +1993,9 @@ help:
 	@echo "... ft_isxdigit.o"
 	@echo "... ft_isxdigit.i"
 	@echo "... ft_isxdigit.s"
+	@echo "... ft_itoa.o"
+	@echo "... ft_itoa.i"
+	@echo "... ft_itoa.s"
 	@echo "... ft_memalloc.o"
 	@echo "... ft_memalloc.i"
 	@echo "... ft_memalloc.s"
@@ -2063,6 +2134,9 @@ help:
 	@echo "... ft_toupper.o"
 	@echo "... ft_toupper.i"
 	@echo "... ft_toupper.s"
+	@echo "... test_itoa.o"
+	@echo "... test_itoa.i"
+	@echo "... test_itoa.s"
 	@echo "... test_strtrim.o"
 	@echo "... test_strtrim.i"
 	@echo "... test_strtrim.s"
