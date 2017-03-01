@@ -6,6 +6,14 @@
 #  define CHK(a, b) do{if(a){return(b);}}while(0)
 #  define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
 
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr(int n);
