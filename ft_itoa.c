@@ -34,9 +34,11 @@ char			*ft_itoa(int nb)
 	int		ngv_flag;
 
 	ngv_flag = (nb >= 0) ? 0 : 1;
-	n = (ngv_flag == 0) ? nb : -nb;
+	n = nb;
+	n = (ngv_flag == 0) ? n : -n;
 	len = nbr_len(n);
-	CHK((ret = ft_strnew(len + 2)) == NULL, NULL);
+	CHK((ret = ft_strnew(len + 1)) == NULL, NULL);
+	CHK1(nb == 0, *ret = '0', ret);
 	if (ngv_flag == 1)
 		ret[0] = '-';
 	len = (ngv_flag == 0) ? len : len + 1;

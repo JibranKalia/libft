@@ -5,7 +5,7 @@ int 	main(void)
 {
 	char	*ret1;
 	//int 	n = 2147483647;
-	int 	n = -364;
+	int 	n = -2147483648;
 	ret1 =	ft_itoa(n);
 
 	//printf("%d\n", n);
