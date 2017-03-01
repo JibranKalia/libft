@@ -13,35 +13,33 @@
 #include <stdio.h>
 #include "libft.h"
 #include <stdlib.h>
+#include <unistd.h>
 
-static char	*ft_nullreturn(char *new)
+static char	*ft_nullreturn(char *dst)
 {
-	CHK((new = (char*)malloc(sizeof(char))) == 0, 0);
-	return (new);
+	CHK((dst = (char*)malloc(sizeof(char))) == 0, 0);
+	return (dst);
 }
 
 char	*ft_strtrim(char const *src)
 {
 	char	*dst;
-	size_t	i;
 	size_t	len;
+	size_t	i;
 
 	len = 0;
+	i = -1;
 	while(*src && ((*src == ' ' || *src == '\n' || *src == '\t')))
 		src++;
-	CHK1(!*src || src == 0, ft_nullreturn(dst), dst);
+	CHK(!*src || src == 0, ft_nullreturn(dst));
 	while (src[len])
 		len++;
-	len--;
-	while (src[len] && (src[len] == '\n' || src[len] == '\t' || src[len] == ' '))
+	while (src[len - 1] == '\n' || src[len - 1] == '\t' || src[len - 1] == ' ')
 		len--;
-	CHK1(len <= 0, ft_nullreturn(dst), dst);
-	CHK((dst = ft_strnew(len + 1)) == 0, 0);
-	dst[len] = '\0';
-	while (len)
-	{
-		dst[len] = src[len];
-		len--;
-	}
+	CHK(len <= 0, ft_nullreturn(dst));
+	CHK((dst = (char*)malloc(sizeof(char) * (len + 1))) == 0, 0);
+	while (++i < len)
+		dst[i] = src[i];
+	dst[i] = '\0';
 	return (dst);
 }
