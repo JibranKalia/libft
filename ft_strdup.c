@@ -9,13 +9,13 @@ char	*ft_strdup(const char *src)
 	len = 0;
 	while (*src++)
 		len++;
-	dst = (char*)malloc(sizeof(char) * (len + 1));
-	if (!dst)
-		return (NULL);
+	CHK((dst = (char*)malloc(sizeof(char) * (len + 1))) == NULL, NULL);
 	src = src - len - 1;
 	while (*src)
 		*dst++ = *src++;
 	*dst = '\0';
 	return (dst - len);
 }
+
+
 

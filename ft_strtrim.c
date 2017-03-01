@@ -10,31 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *src)
 {
 	char	*dst;
-	int		start;
-	int		end;
-	int		i;
+	size_t	start;
+	size_t	i;
 	size_t	len;
 
-	CHK(!*src, NULL);
-	len = ft_strlen(src);
-	end = len;
+	CHK(!*src, 0);
+	len = 0;
 	start = 0;
-	i = 0;
+	i = -1;
+	while (src[len] != '\0')
+		len++;
 	CHK((dst = ft_strnew(len + 1)) == NULL, NULL);
+	len--;
+	CHK(len <= 0, 0);
 	while (src[start] == '\n' || src[start] == '\t' || src[start] == ' ')
 		start++;
-	while (src[end] == '\n' || src[end] == '\t' || src[end] == ' ')
-		end--;
-	while (start < end)
-	{
-		dst[i] = src[start];
-		i++;
-		start++;
-	}
+	while (src[len] == '\n' || src[len] == '\t' || src[len] == ' ')
+		len--;
+	len = len - start + 1;
+	if (len <= 0)
+		return (0);
+	while (++i < len)
+		dst[i] = src[start + i];
+	dst[i] = '\0';
 	return (dst);
 }
