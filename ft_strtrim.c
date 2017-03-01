@@ -27,6 +27,7 @@ char	*ft_strtrim(char const *src)
 	size_t	len;
 	size_t	i;
 
+	dst = NULL;
 	len = 0;
 	i = -1;
 	while(*src && ((*src == ' ' || *src == '\n' || *src == '\t')))

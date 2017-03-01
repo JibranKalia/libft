@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
 int	strlcat_test1(void)
 {
