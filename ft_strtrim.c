@@ -12,32 +12,36 @@
 
 #include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
+
+static char	*ft_nullreturn(char *new)
+{
+	CHK((new = (char*)malloc(sizeof(char))) == 0, 0);
+	return (new);
+}
 
 char	*ft_strtrim(char const *src)
 {
 	char	*dst;
-	size_t	start;
 	size_t	i;
 	size_t	len;
 
-	CHK(!*src, 0);
 	len = 0;
-	start = 0;
-	i = -1;
-	while (src[len] != '\0')
+	while(*src && ((*src == ' ' || *src == '\n' || *src == '\t')))
+		src++;
+	CHK1(!*src || src == 0, ft_nullreturn(dst), dst);
+	while (src[len])
 		len++;
-	CHK((dst = ft_strnew(len + 1)) == NULL, NULL);
 	len--;
-	CHK(len <= 0, 0);
-	while (src[start] == '\n' || src[start] == '\t' || src[start] == ' ')
-		start++;
-	while (src[len] == '\n' || src[len] == '\t' || src[len] == ' ')
+	while (src[len] && (src[len] == '\n' || src[len] == '\t' || src[len] == ' '))
 		len--;
-	len = len - start + 1;
-	if (len <= 0)
-		return (0);
-	while (++i < len)
-		dst[i] = src[start + i];
-	dst[i] = '\0';
+	CHK1(len <= 0, ft_nullreturn(dst), dst);
+	CHK((dst = ft_strnew(len + 1)) == 0, 0);
+	dst[len] = '\0';
+	while (len)
+	{
+		dst[len] = src[len];
+		len--;
+	}
 	return (dst);
 }
