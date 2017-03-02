@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/27 11:07:02 by jkalia            #+#    #+#             */
-/*   Updated: 2017/02/27 11:07:36 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/02 12:26:00 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/02 12:26:01 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int		ft_atoi(const char *str)
+void	ft_lstdel(t_list**alst,void(*del)(void*, size_t))
 {
-	int					neg_flag;
-	unsigned long long	res;
-	int					i;
+	t_list	*tmp;
 
-	i = 0;
-	res = 0;
-	while (ISSPACE(*str))
-		str++;
-	neg_flag = (*str == '-') ? -1 : 1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while(*str == '0')
-		str++;
-	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
+	if (!*alst || !alst)
+		return ;
+	while (*alst)
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		del((*alst)->cnt, (*alst)->sze);
+		tmp = (*alst)->nxt;
+		free(*alst);
+		*alst = NULL;
+		*alst = tmp;
 	}
-	if (i > 19)
-		return ((neg_flag == 1) ? -1 : 0);
-	return (neg_flag * (int)res);
 }
+

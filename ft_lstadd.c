@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/02 08:59:28 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/02 08:59:34 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/02 09:39:05 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/02 09:39:07 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstnew(void const *src, size_t sze)
+void	ft_lstadd(t_list **alst,t_list *new)
 {
-	t_list	*new;
-
-	CHK((new = (t_list*)malloc(sizeof(t_list))) == NULL, NULL);
-
-	if (!src)
-	{
-		new->cnt = NULL;
-		new->sze = 0;
-	}
-	else
-	{
-		CHK1((new->cnt = malloc(sizeof(sze))) == NULL, free(new), NULL);
-		ft_memcpy(new->cnt, src, sze);
-		new->sze = sze;
-	}
-	new->nxt = NULL;
-	return (new);
+	new->nxt = *alst;
+	*alst = new;
 }
