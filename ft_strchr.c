@@ -2,14 +2,12 @@
 
 char	*ft_strchr(const char *src, int c)
 {
-	char	to_find;
-	char	*csrc;
+	unsigned char	to_find;
 
-	csrc = (char *)src;
-	to_find = (char)c;
-	while(*csrc != '\0' && *csrc != to_find)
-		csrc++;
-	if (*csrc == to_find)
-		return(csrc);
+	to_find = (unsigned char)c;
+	while(*src != '\0' && *src != to_find)
+		src++;
+	if (*src == to_find)
+		return((char *)src);
 	return (NULL);
 }
