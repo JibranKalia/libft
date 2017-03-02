@@ -70,6 +70,7 @@ SRC = ft_putchar.c \
 	  ft_abs.c \
 	  ft_lstnew.c \
 	  ft_lstadd.c \
+	  ft_lstiter.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m

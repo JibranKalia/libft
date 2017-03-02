@@ -730,6 +730,60 @@ ft_lstdelone.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdelone.c.s
 .PHONY : ft_lstdelone.c.s
 
+ft_lstiter.o: ft_lstiter.c.o
+
+.PHONY : ft_lstiter.o
+
+# target to build an object file
+ft_lstiter.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstiter.c.o
+.PHONY : ft_lstiter.c.o
+
+ft_lstiter.i: ft_lstiter.c.i
+
+.PHONY : ft_lstiter.i
+
+# target to preprocess a source file
+ft_lstiter.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstiter.c.i
+.PHONY : ft_lstiter.c.i
+
+ft_lstiter.s: ft_lstiter.c.s
+
+.PHONY : ft_lstiter.s
+
+# target to generate assembly for a file
+ft_lstiter.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstiter.c.s
+.PHONY : ft_lstiter.c.s
+
+ft_lstmap.o: ft_lstmap.c.o
+
+.PHONY : ft_lstmap.o
+
+# target to build an object file
+ft_lstmap.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstmap.c.o
+.PHONY : ft_lstmap.c.o
+
+ft_lstmap.i: ft_lstmap.c.i
+
+.PHONY : ft_lstmap.i
+
+# target to preprocess a source file
+ft_lstmap.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstmap.c.i
+.PHONY : ft_lstmap.c.i
+
+ft_lstmap.s: ft_lstmap.c.s
+
+.PHONY : ft_lstmap.s
+
+# target to generate assembly for a file
+ft_lstmap.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstmap.c.s
+.PHONY : ft_lstmap.c.s
+
 ft_lstnew.o: ft_lstnew.c.o
 
 .PHONY : ft_lstnew.o
@@ -2102,6 +2156,12 @@ help:
 	@echo "... ft_lstdelone.o"
 	@echo "... ft_lstdelone.i"
 	@echo "... ft_lstdelone.s"
+	@echo "... ft_lstiter.o"
+	@echo "... ft_lstiter.i"
+	@echo "... ft_lstiter.s"
+	@echo "... ft_lstmap.o"
+	@echo "... ft_lstmap.i"
+	@echo "... ft_lstmap.s"
 	@echo "... ft_lstnew.o"
 	@echo "... ft_lstnew.i"
 	@echo "... ft_lstnew.s"

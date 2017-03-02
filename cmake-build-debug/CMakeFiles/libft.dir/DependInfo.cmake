@@ -25,6 +25,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2017/j/jkalia/Desktop/libft/ft_lstadd.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstadd.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_lstdel.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstdel.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_lstdelone.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstdelone.c.o"
+  "/nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstiter.c.o"
+  "/nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstmap.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_lstnew.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_lstnew.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_memalloc.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_memalloc.c.o"
   "/nfs/2017/j/jkalia/Desktop/libft/ft_memccpy.c" "/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles/libft.dir/ft_memccpy.c.o"

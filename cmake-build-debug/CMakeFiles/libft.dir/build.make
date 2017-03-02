@@ -1689,6 +1689,54 @@ CMakeFiles/libft.dir/ft_lstdel.c.o.provides: CMakeFiles/libft.dir/ft_lstdel.c.o.
 CMakeFiles/libft.dir/ft_lstdel.c.o.provides.build: CMakeFiles/libft.dir/ft_lstdel.c.o
 
 
+CMakeFiles/libft.dir/ft_lstiter.c.o: CMakeFiles/libft.dir/flags.make
+CMakeFiles/libft.dir/ft_lstiter.c.o: ../ft_lstiter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/libft.dir/ft_lstiter.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/libft.dir/ft_lstiter.c.o   -c /nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c
+
+CMakeFiles/libft.dir/ft_lstiter.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libft.dir/ft_lstiter.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c > CMakeFiles/libft.dir/ft_lstiter.c.i
+
+CMakeFiles/libft.dir/ft_lstiter.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libft.dir/ft_lstiter.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c -o CMakeFiles/libft.dir/ft_lstiter.c.s
+
+CMakeFiles/libft.dir/ft_lstiter.c.o.requires:
+
+.PHONY : CMakeFiles/libft.dir/ft_lstiter.c.o.requires
+
+CMakeFiles/libft.dir/ft_lstiter.c.o.provides: CMakeFiles/libft.dir/ft_lstiter.c.o.requires
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstiter.c.o.provides.build
+.PHONY : CMakeFiles/libft.dir/ft_lstiter.c.o.provides
+
+CMakeFiles/libft.dir/ft_lstiter.c.o.provides.build: CMakeFiles/libft.dir/ft_lstiter.c.o
+
+
+CMakeFiles/libft.dir/ft_lstmap.c.o: CMakeFiles/libft.dir/flags.make
+CMakeFiles/libft.dir/ft_lstmap.c.o: ../ft_lstmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/libft.dir/ft_lstmap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/libft.dir/ft_lstmap.c.o   -c /nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c
+
+CMakeFiles/libft.dir/ft_lstmap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/libft.dir/ft_lstmap.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c > CMakeFiles/libft.dir/ft_lstmap.c.i
+
+CMakeFiles/libft.dir/ft_lstmap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/libft.dir/ft_lstmap.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c -o CMakeFiles/libft.dir/ft_lstmap.c.s
+
+CMakeFiles/libft.dir/ft_lstmap.c.o.requires:
+
+.PHONY : CMakeFiles/libft.dir/ft_lstmap.c.o.requires
+
+CMakeFiles/libft.dir/ft_lstmap.c.o.provides: CMakeFiles/libft.dir/ft_lstmap.c.o.requires
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstmap.c.o.provides.build
+.PHONY : CMakeFiles/libft.dir/ft_lstmap.c.o.provides
+
+CMakeFiles/libft.dir/ft_lstmap.c.o.provides.build: CMakeFiles/libft.dir/ft_lstmap.c.o
+
+
 # Object files for target libft
 libft_OBJECTS = \
 "CMakeFiles/libft.dir/ft_putchar.c.o" \
@@ -1758,7 +1806,9 @@ libft_OBJECTS = \
 "CMakeFiles/libft.dir/ft_lstnew.c.o" \
 "CMakeFiles/libft.dir/ft_lstadd.c.o" \
 "CMakeFiles/libft.dir/ft_lstdelone.c.o" \
-"CMakeFiles/libft.dir/ft_lstdel.c.o"
+"CMakeFiles/libft.dir/ft_lstdel.c.o" \
+"CMakeFiles/libft.dir/ft_lstiter.c.o" \
+"CMakeFiles/libft.dir/ft_lstmap.c.o"
 
 # External object files for target libft
 libft_EXTERNAL_OBJECTS =
@@ -1831,9 +1881,11 @@ liblibft.a: CMakeFiles/libft.dir/ft_lstnew.c.o
 liblibft.a: CMakeFiles/libft.dir/ft_lstadd.c.o
 liblibft.a: CMakeFiles/libft.dir/ft_lstdelone.c.o
 liblibft.a: CMakeFiles/libft.dir/ft_lstdel.c.o
+liblibft.a: CMakeFiles/libft.dir/ft_lstiter.c.o
+liblibft.a: CMakeFiles/libft.dir/ft_lstmap.c.o
 liblibft.a: CMakeFiles/libft.dir/build.make
 liblibft.a: CMakeFiles/libft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking C static library liblibft.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2017/j/jkalia/Desktop/libft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C static library liblibft.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/libft.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libft.dir/link.txt --verbose=$(VERBOSE)
 
@@ -1910,6 +1962,8 @@ CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstnew.c.o.requires
 CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstadd.c.o.requires
 CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstdelone.c.o.requires
 CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstdel.c.o.requires
+CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstiter.c.o.requires
+CMakeFiles/libft.dir/requires: CMakeFiles/libft.dir/ft_lstmap.c.o.requires
 
 .PHONY : CMakeFiles/libft.dir/requires
 

@@ -50,6 +50,12 @@ CMakeFiles/libft.dir/ft_lstdel.c.o
 CMakeFiles/libft.dir/ft_lstdelone.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_lstdelone.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_lstiter.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
+CMakeFiles/libft.dir/ft_lstmap.c.o
+ /nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c
+ /nfs/2017/j/jkalia/Desktop/libft/libft.h
 CMakeFiles/libft.dir/ft_lstnew.c.o
  /nfs/2017/j/jkalia/Desktop/libft/ft_lstnew.c
  /nfs/2017/j/jkalia/Desktop/libft/libft.h

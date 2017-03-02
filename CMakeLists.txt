@@ -72,6 +72,8 @@ set(SOURCE_FILES ft_putchar.c
         ft_lstadd.c
         ft_lstdelone.c
         ft_lstdel.c
+        ft_lstiter.c
+        ft_lstmap.c
         )
 
 set(CMAKE_C_STANDARD 90)

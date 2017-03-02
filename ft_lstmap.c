@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/02 08:59:28 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/02 08:59:34 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/02 14:36:59 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/02 14:38:41 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstnew(void const *src, size_t sze)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt))
 {
-	t_list	*new;
+	t_list	*ret;
+	t_list	*org;
 
-	CHK((new = (t_list*)malloc(sizeof(t_list))) == NULL, NULL);
-	if (!src)
+	org = f(lst);
+	ret = org;
+	while (lst->nxt)
 	{
-		new->cnt = NULL;
-		new->sze = 0;
+		ret->nxt = f(lst->nxt);
+		ret = ret->nxt;
+		lst = lst->nxt;
 	}
-	else
-	{
-		CHK1((new->cnt = malloc(sizeof(sze))) == NULL, free(new), NULL);
-		ft_memcpy(new->cnt, src, sze);
-		new->sze = sze;
-	}
-	new->nxt = NULL;
-	return (new);
+	return (org);
 }

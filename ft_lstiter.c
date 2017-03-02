@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/02 08:59:28 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/02 08:59:34 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/02 14:23:01 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/02 14:23:50 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstnew(void const *src, size_t sze)
+void	ft_lstiter(t_list *lst,void(*f)(t_list *cnt))
 {
-	t_list	*new;
-
-	CHK((new = (t_list*)malloc(sizeof(t_list))) == NULL, NULL);
-	if (!src)
+	while (lst->nxt)
 	{
-		new->cnt = NULL;
-		new->sze = 0;
+		f(lst->cnt);
+		lst = lst->nxt;
 	}
-	else
-	{
-		CHK1((new->cnt = malloc(sizeof(sze))) == NULL, free(new), NULL);
-		ft_memcpy(new->cnt, src, sze);
-		new->sze = sze;
-	}
-	new->nxt = NULL;
-	return (new);
 }

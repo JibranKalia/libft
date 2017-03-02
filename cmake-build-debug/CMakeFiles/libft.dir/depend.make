@@ -50,6 +50,12 @@ CMakeFiles/libft.dir/ft_lstdel.c.o: ../libft.h
 CMakeFiles/libft.dir/ft_lstdelone.c.o: ../ft_lstdelone.c
 CMakeFiles/libft.dir/ft_lstdelone.c.o: ../libft.h
 
+CMakeFiles/libft.dir/ft_lstiter.c.o: ../ft_lstiter.c
+CMakeFiles/libft.dir/ft_lstiter.c.o: ../libft.h
+
+CMakeFiles/libft.dir/ft_lstmap.c.o: ../ft_lstmap.c
+CMakeFiles/libft.dir/ft_lstmap.c.o: ../libft.h
+
 CMakeFiles/libft.dir/ft_lstnew.c.o: ../ft_lstnew.c
 CMakeFiles/libft.dir/ft_lstnew.c.o: ../libft.h
 

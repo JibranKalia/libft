@@ -67,6 +67,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_lstadd.c.o"
   "CMakeFiles/libft.dir/ft_lstdelone.c.o"
   "CMakeFiles/libft.dir/ft_lstdel.c.o"
+  "CMakeFiles/libft.dir/ft_lstiter.c.o"
+  "CMakeFiles/libft.dir/ft_lstmap.c.o"
   "liblibft.pdb"
   "liblibft.a"
 )

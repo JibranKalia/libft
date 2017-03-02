@@ -68,6 +68,16 @@ libft.h
 stdlib.h
 -
 
+/nfs/2017/j/jkalia/Desktop/libft/ft_lstiter.c
+libft.h
+/nfs/2017/j/jkalia/Desktop/libft/libft.h
+
+/nfs/2017/j/jkalia/Desktop/libft/ft_lstmap.c
+libft.h
+/nfs/2017/j/jkalia/Desktop/libft/libft.h
+stdlib.h
+-
+
 /nfs/2017/j/jkalia/Desktop/libft/ft_lstnew.c
 libft.h
 /nfs/2017/j/jkalia/Desktop/libft/libft.h
