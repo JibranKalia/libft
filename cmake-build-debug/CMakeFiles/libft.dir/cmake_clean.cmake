@@ -63,6 +63,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/libft.dir/ft_strmapi.c.o"
   "CMakeFiles/libft.dir/ft_strjoin.c.o"
   "CMakeFiles/libft.dir/ft_itoa.c.o"
+  "CMakeFiles/libft.dir/ft_lstnew.c.o"
+  "CMakeFiles/libft.dir/ft_lstadd.c.o"
+  "CMakeFiles/libft.dir/ft_lstdelone.c.o"
+  "CMakeFiles/libft.dir/ft_lstdel.c.o"
   "liblibft.pdb"
   "liblibft.a"
 )

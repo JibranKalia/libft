@@ -68,6 +68,8 @@ SRC = ft_putchar.c \
 	  ft_atoi.c \
 	  ft_itoa.c \
 	  ft_abs.c \
+	  ft_lstnew.c \
+	  ft_lstadd.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m
@@ -120,4 +122,10 @@ test: all
 	@echo "${YELLOW}Test7: Strltrim Test${NC}"
 	@gcc $(CFLAGS) test_strtrim.c -L. -lft -o test7
 	@./test7
-	@rm -f test1 test2 test3 test4 test5 test6 
+	@echo "${YELLOW}Test8: Strsplit Test${NC}"
+	@gcc $(CFLAGS) test_strsplit.c -L. -lft -o test8
+	@./test8
+	@echo "${YELLOW}Test9: Memmove Test${NC}"
+	@gcc $(CFLAGS) test_memmove.c -L. -lft -o test9
+	@./test9
+	@rm -f test1 test2 test3 test4 test5 test6 test7 test8 test9

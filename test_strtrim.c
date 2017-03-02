@@ -9,8 +9,6 @@ int 	test_strtrim1(void)
 	char *s2 = "Hello !";
 	char *ret = ft_strtrim(s1);
 
-	printf("%s\n", ret);
-
 	if (!strcmp(ret, s2))
 		return (1);
 	return (0);
@@ -40,15 +38,10 @@ int 	main(void)
 {
 	if (test_strtrim1() == 0)
 		printf("Test1: Error\n");
-	else
-		printf("Test1 PASS\n");
 	if (test_strtrim2() == 0)
 		ft_putstr("Test2: Error\n");
-	else
-		printf("Test2 PASS\n");
 	if((test_strtrim3() == 0))
 		printf("Test3: Error\n");
-	else
-		printf("Test3 PASS\n");
+	printf("If no error^^^. All Tests PASS\n");
 	return (0);
 }

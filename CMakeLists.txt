@@ -68,6 +68,10 @@ set(SOURCE_FILES ft_putchar.c
         ft_strjoin.c
         ft_strtrim.c
         ft_itoa.c
+        ft_lstnew.c
+        ft_lstadd.c
+        ft_lstdelone.c
+        ft_lstdel.c
         )
 
 set(CMAKE_C_STANDARD 90)
@@ -81,8 +85,9 @@ add_library(libft ${SOURCE_FILES})
 #add_executable(test6 test_strlcat.c)
 #add_executable(test7 test_str.c)
 #add_executable(test8 test_str2.c)
-add_executable(test9 test_strtrim.c)
-add_executable(test10 test_itoa.c)
+#add_executable(test9 test_strtrim.c)
+#add_executable(test10 test_itoa.c)
+add_executable(test11 test_list.c alloc_wrap.c)
 #target_link_libraries(test1 libft)
 #target_link_libraries(test2 libft)
 #target_link_libraries(test3 libft)
@@ -91,6 +96,7 @@ add_executable(test10 test_itoa.c)
 #target_link_libraries(test6 libft)
 #target_link_libraries(test7 libft)
 #target_link_libraries(test8 libft)
-target_link_libraries(test9 libft)
-target_link_libraries(test10 libft)
+#target_link_libraries(test9 libft)
+#target_link_libraries(test10 libft)
+target_link_libraries(test11 libft)
 

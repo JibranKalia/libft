@@ -71,6 +71,6 @@ int		main(void)
 	if (ary1[0] != -42)
 		printf("FAIL: wrote past end\n");
 
-	printf("Done\n");
+	printf("Memmove Pass\n");
 	return (0);
 }

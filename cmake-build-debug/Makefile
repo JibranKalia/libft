@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test9
+# Target rules for targets named test11
 
 # Build rule for target.
-test9: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test9
-.PHONY : test9
+test11: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test11
+.PHONY : test11
 
 # fast build rule for target.
-test9/fast:
-	$(MAKE) -f CMakeFiles/test9.dir/build.make CMakeFiles/test9.dir/build
-.PHONY : test9/fast
-
-#=============================================================================
-# Target rules for targets named test10
-
-# Build rule for target.
-test10: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test10
-.PHONY : test10
-
-# fast build rule for target.
-test10/fast:
-	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/build
-.PHONY : test10/fast
+test11/fast:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/build
+.PHONY : test11/fast
 
 #=============================================================================
 # Target rules for targets named libft
@@ -148,6 +135,33 @@ libft: cmake_check_build_system
 libft/fast:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/build
 .PHONY : libft/fast
+
+alloc_wrap.o: alloc_wrap.c.o
+
+.PHONY : alloc_wrap.o
+
+# target to build an object file
+alloc_wrap.c.o:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/alloc_wrap.c.o
+.PHONY : alloc_wrap.c.o
+
+alloc_wrap.i: alloc_wrap.c.i
+
+.PHONY : alloc_wrap.i
+
+# target to preprocess a source file
+alloc_wrap.c.i:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/alloc_wrap.c.i
+.PHONY : alloc_wrap.c.i
+
+alloc_wrap.s: alloc_wrap.c.s
+
+.PHONY : alloc_wrap.s
+
+# target to generate assembly for a file
+alloc_wrap.c.s:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/alloc_wrap.c.s
+.PHONY : alloc_wrap.c.s
 
 ft_abs.o: ft_abs.c.o
 
@@ -634,6 +648,114 @@ ft_itoa.s: ft_itoa.c.s
 ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_itoa.c.s
 .PHONY : ft_itoa.c.s
+
+ft_lstadd.o: ft_lstadd.c.o
+
+.PHONY : ft_lstadd.o
+
+# target to build an object file
+ft_lstadd.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstadd.c.o
+.PHONY : ft_lstadd.c.o
+
+ft_lstadd.i: ft_lstadd.c.i
+
+.PHONY : ft_lstadd.i
+
+# target to preprocess a source file
+ft_lstadd.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstadd.c.i
+.PHONY : ft_lstadd.c.i
+
+ft_lstadd.s: ft_lstadd.c.s
+
+.PHONY : ft_lstadd.s
+
+# target to generate assembly for a file
+ft_lstadd.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstadd.c.s
+.PHONY : ft_lstadd.c.s
+
+ft_lstdel.o: ft_lstdel.c.o
+
+.PHONY : ft_lstdel.o
+
+# target to build an object file
+ft_lstdel.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdel.c.o
+.PHONY : ft_lstdel.c.o
+
+ft_lstdel.i: ft_lstdel.c.i
+
+.PHONY : ft_lstdel.i
+
+# target to preprocess a source file
+ft_lstdel.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdel.c.i
+.PHONY : ft_lstdel.c.i
+
+ft_lstdel.s: ft_lstdel.c.s
+
+.PHONY : ft_lstdel.s
+
+# target to generate assembly for a file
+ft_lstdel.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdel.c.s
+.PHONY : ft_lstdel.c.s
+
+ft_lstdelone.o: ft_lstdelone.c.o
+
+.PHONY : ft_lstdelone.o
+
+# target to build an object file
+ft_lstdelone.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdelone.c.o
+.PHONY : ft_lstdelone.c.o
+
+ft_lstdelone.i: ft_lstdelone.c.i
+
+.PHONY : ft_lstdelone.i
+
+# target to preprocess a source file
+ft_lstdelone.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdelone.c.i
+.PHONY : ft_lstdelone.c.i
+
+ft_lstdelone.s: ft_lstdelone.c.s
+
+.PHONY : ft_lstdelone.s
+
+# target to generate assembly for a file
+ft_lstdelone.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstdelone.c.s
+.PHONY : ft_lstdelone.c.s
+
+ft_lstnew.o: ft_lstnew.c.o
+
+.PHONY : ft_lstnew.o
+
+# target to build an object file
+ft_lstnew.c.o:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstnew.c.o
+.PHONY : ft_lstnew.c.o
+
+ft_lstnew.i: ft_lstnew.c.i
+
+.PHONY : ft_lstnew.i
+
+# target to preprocess a source file
+ft_lstnew.c.i:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstnew.c.i
+.PHONY : ft_lstnew.c.i
+
+ft_lstnew.s: ft_lstnew.c.s
+
+.PHONY : ft_lstnew.s
+
+# target to generate assembly for a file
+ft_lstnew.c.s:
+	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_lstnew.c.s
+.PHONY : ft_lstnew.c.s
 
 ft_memalloc.o: ft_memalloc.c.o
 
@@ -1877,59 +1999,32 @@ ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/libft.dir/build.make CMakeFiles/libft.dir/ft_toupper.c.s
 .PHONY : ft_toupper.c.s
 
-test_itoa.o: test_itoa.c.o
+test_list.o: test_list.c.o
 
-.PHONY : test_itoa.o
-
-# target to build an object file
-test_itoa.c.o:
-	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.o
-.PHONY : test_itoa.c.o
-
-test_itoa.i: test_itoa.c.i
-
-.PHONY : test_itoa.i
-
-# target to preprocess a source file
-test_itoa.c.i:
-	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.i
-.PHONY : test_itoa.c.i
-
-test_itoa.s: test_itoa.c.s
-
-.PHONY : test_itoa.s
-
-# target to generate assembly for a file
-test_itoa.c.s:
-	$(MAKE) -f CMakeFiles/test10.dir/build.make CMakeFiles/test10.dir/test_itoa.c.s
-.PHONY : test_itoa.c.s
-
-test_strtrim.o: test_strtrim.c.o
-
-.PHONY : test_strtrim.o
+.PHONY : test_list.o
 
 # target to build an object file
-test_strtrim.c.o:
-	$(MAKE) -f CMakeFiles/test9.dir/build.make CMakeFiles/test9.dir/test_strtrim.c.o
-.PHONY : test_strtrim.c.o
+test_list.c.o:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test_list.c.o
+.PHONY : test_list.c.o
 
-test_strtrim.i: test_strtrim.c.i
+test_list.i: test_list.c.i
 
-.PHONY : test_strtrim.i
+.PHONY : test_list.i
 
 # target to preprocess a source file
-test_strtrim.c.i:
-	$(MAKE) -f CMakeFiles/test9.dir/build.make CMakeFiles/test9.dir/test_strtrim.c.i
-.PHONY : test_strtrim.c.i
+test_list.c.i:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test_list.c.i
+.PHONY : test_list.c.i
 
-test_strtrim.s: test_strtrim.c.s
+test_list.s: test_list.c.s
 
-.PHONY : test_strtrim.s
+.PHONY : test_list.s
 
 # target to generate assembly for a file
-test_strtrim.c.s:
-	$(MAKE) -f CMakeFiles/test9.dir/build.make CMakeFiles/test9.dir/test_strtrim.c.s
-.PHONY : test_strtrim.c.s
+test_list.c.s:
+	$(MAKE) -f CMakeFiles/test11.dir/build.make CMakeFiles/test11.dir/test_list.c.s
+.PHONY : test_list.c.s
 
 # Help Target
 help:
@@ -1937,11 +2032,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test9"
+	@echo "... test11"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test10"
 	@echo "... libft"
+	@echo "... alloc_wrap.o"
+	@echo "... alloc_wrap.i"
+	@echo "... alloc_wrap.s"
 	@echo "... ft_abs.o"
 	@echo "... ft_abs.i"
 	@echo "... ft_abs.s"
@@ -1996,6 +2093,18 @@ help:
 	@echo "... ft_itoa.o"
 	@echo "... ft_itoa.i"
 	@echo "... ft_itoa.s"
+	@echo "... ft_lstadd.o"
+	@echo "... ft_lstadd.i"
+	@echo "... ft_lstadd.s"
+	@echo "... ft_lstdel.o"
+	@echo "... ft_lstdel.i"
+	@echo "... ft_lstdel.s"
+	@echo "... ft_lstdelone.o"
+	@echo "... ft_lstdelone.i"
+	@echo "... ft_lstdelone.s"
+	@echo "... ft_lstnew.o"
+	@echo "... ft_lstnew.i"
+	@echo "... ft_lstnew.s"
 	@echo "... ft_memalloc.o"
 	@echo "... ft_memalloc.i"
 	@echo "... ft_memalloc.s"
@@ -2134,12 +2243,9 @@ help:
 	@echo "... ft_toupper.o"
 	@echo "... ft_toupper.i"
 	@echo "... ft_toupper.s"
-	@echo "... test_itoa.o"
-	@echo "... test_itoa.i"
-	@echo "... test_itoa.s"
-	@echo "... test_strtrim.o"
-	@echo "... test_strtrim.i"
-	@echo "... test_strtrim.s"
+	@echo "... test_list.o"
+	@echo "... test_list.i"
+	@echo "... test_list.s"
 .PHONY : help
 
 

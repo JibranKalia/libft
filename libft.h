@@ -3,16 +3,21 @@
 
 # include <string.h> 
 
-#  define CHK(a, b) do{if(a){return(b);}}while(0)
-#  define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
+# define CHK(a, b) do{if(a){return(b);}}while(0)
+# define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
+# define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
 
 
 typedef struct		s_list
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
+	void			*cnt;
+	size_t			sze;
+	struct s_list	*nxt;
 }					t_list;
+
+t_list	*ft_lstnew(void const *src, size_t sze);
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);

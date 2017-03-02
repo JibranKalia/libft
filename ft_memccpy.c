@@ -11,11 +11,10 @@ void	*ft_memccpy(void *dst, const void *src, int src_c, size_t len)
 	csrc = (const unsigned char*)src;
 	cdst = (unsigned char*)dst;
 	ch = (unsigned char)src_c;
-
 	while (len-- > 0)
 	{
 		if((*cdst++ = *csrc++) == ch)
-			return (cdst);
+			return ((void *)cdst);
 	}
 	return (0);
 }
