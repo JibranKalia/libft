@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 11:07:02 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/03 17:01:31 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/03 22:42:08 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int		ft_atoi(const char *str)
 		str++;
 	while (*str == '0')
 		str++;
-	while (ISDIGIT(str[i]) && i < 30)
+	while (ISDIGIT(str[i])) 
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i > 19)
-		return ((neg_flag == 1) ? -1 : 0);
+	if (i > 19 && ret >= 9223372036854775808)
+		return ((neg_flag == 1) ? 0 : -1);
 	return (neg_flag * (int)res);
 }
