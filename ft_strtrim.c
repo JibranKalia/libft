@@ -6,15 +6,12 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:58:07 by jkalia            #+#    #+#             */
-/*   Updated: 2017/02/28 10:58:08 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/03 22:41:10 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 #include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 
 char	*ft_strtrim(char const *src)
 {
