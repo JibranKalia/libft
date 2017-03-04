@@ -18,8 +18,9 @@ char	*ft_strmap(char const *src, char (*f)(char))
 	int		i;
 	char	*res;
 
-	len = ft_strlen(src);
+	CHK(!src, 0);
 	i = 0;
+	len = ft_strlen(src);
 	CHK((res = ft_strnew(len)) == NULL, 0);
 	while (src[i])
 	{

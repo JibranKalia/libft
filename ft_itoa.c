@@ -6,32 +6,29 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 09:27:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/01 09:27:40 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/03 19:48:43 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t	nbr_len(long n)
+static size_t	nbr_len(long long n)
 {
 	size_t	i;
 
-	i = 0;
-	while (n > 0)
-	{
-		n /= 10;
+	i = 1;
+	while ((n /= 10) > 0)
 		i++;
-	}
 	return (i);
 }
 
 char			*ft_itoa(int nb)
 {
-	long	n;
-	int		len;
-	char	*ret;
-	int		ngv_flag;
+	long long	n;
+	int			len;
+	char		*ret;
+	int			ngv_flag;
 
 	ngv_flag = (nb >= 0) ? 0 : 1;
 	n = nb;
@@ -47,7 +44,7 @@ char			*ft_itoa(int nb)
 	{
 		--len;
 		ret[len] = n % 10 + '0';
-		n = n / 10;
+		n /= 10;
 	}
 	return (ret);
 }

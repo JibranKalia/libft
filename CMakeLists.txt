@@ -58,7 +58,6 @@ set(SOURCE_FILES ft_putchar.c
         ft_abs.c
         ft_putendl.c
         ft_strcmp.c
-        libft.h
         ft_isnum.c
         ft_strsub.c
         ft_strequ.c
@@ -75,6 +74,7 @@ set(SOURCE_FILES ft_putchar.c
         ft_lstiter.c
         ft_lstmap.c
         )
+include_directories(includes)
 
 set(CMAKE_C_STANDARD 90)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
@@ -89,7 +89,8 @@ add_library(libft ${SOURCE_FILES})
 #add_executable(test8 test_str2.c)
 #add_executable(test9 test_strtrim.c)
 #add_executable(test10 test_itoa.c)
-add_executable(test11 test_list.c alloc_wrap.c)
+#add_executable(test11 test_list.c alloc_wrap.c)
+add_executable(test12 main.c)
 #target_link_libraries(test1 libft)
 #target_link_libraries(test2 libft)
 #target_link_libraries(test3 libft)
@@ -100,5 +101,7 @@ add_executable(test11 test_list.c alloc_wrap.c)
 #target_link_libraries(test8 libft)
 #target_link_libraries(test9 libft)
 #target_link_libraries(test10 libft)
-target_link_libraries(test11 libft)
+#target_link_libraries(test11 libft)
+target_link_libraries(test12 libft)
+
 

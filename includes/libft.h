@@ -6,7 +6,6 @@
 # define CHK(a, b) do{if(a){return(b);}}while(0)
 # define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
 # define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
-# define ISDIGIT(a) (a >= 48 && a <= 57)
 
 typedef struct		s_list
 {

@@ -71,6 +71,9 @@ SRC = ft_putchar.c \
 	  ft_lstnew.c \
 	  ft_lstadd.c \
 	  ft_lstiter.c \
+	  ft_lstdel.c \
+	  ft_lstdelone.c \
+	  ft_lstmap.c \
 
 RED 	= \033[0;31m
 YELLOW 	= \033[0;33m

@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 10:50:59 by jkalia            #+#    #+#             */
-/*   Updated: 2017/02/28 10:51:02 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/03 17:45:47 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_strjoin(char const *src1, char const *src2)
 {
 	char	*ret;
 	char	*dst;
-	size_t 	len;
+	size_t	len;
+
+	CHK(src1 == 0 || src2 == 0, 0);
 	len = ft_strlen(src1);
 	len += ft_strlen(src2);
 	CHK((dst = ft_strnew(len + 1)) == 0, NULL);

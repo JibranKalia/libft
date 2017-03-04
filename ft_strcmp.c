@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 17:42:55 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/03 17:43:03 by jkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_strcmp(const char *src1, const char *src2)
@@ -9,5 +21,5 @@ int		ft_strcmp(const char *src1, const char *src2)
 		src1++;
 		src2++;
 	}
-	return ((unsigned char)*src1 - (unsigned char) *src2);
+	return ((unsigned char)*src1 - (unsigned char)*src2);
 }

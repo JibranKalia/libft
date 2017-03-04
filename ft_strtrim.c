@@ -14,12 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 #include <unistd.h>
-
-static char	*ft_nullreturn(char *dst)
-{
-	CHK((dst = (char*)malloc(sizeof(char))) == 0, 0);
-	return (dst);
-}
+#include <stdio.h>
 
 char	*ft_strtrim(char const *src)
 {
@@ -27,17 +22,17 @@ char	*ft_strtrim(char const *src)
 	size_t	len;
 	size_t	i;
 
-	dst = NULL;
+	CHK((dst = (char*)malloc(sizeof(char))) == 0, 0);
+	CHK(!src || !*src, dst);
 	len = 0;
 	i = -1;
-	while(*src && ((*src == ' ' || *src == '\n' || *src == '\t')))
+	while (*src && src != 0 && ((*src == ' ' || *src == '\n' || *src == '\t')))
 		src++;
-	CHK(!*src || src == 0, ft_nullreturn(dst));
-	while (src[len])
+	while (src[len] && src)
 		len++;
-	while (src[len - 1] == '\n' || src[len - 1] == '\t' || src[len - 1] == ' ')
+	while ((src[len - 1] == '\n' || src[len - 1] == '\t'
+			|| src[len - 1] == ' ') && len > 0)
 		len--;
-	CHK(len <= 0, ft_nullreturn(dst));
 	CHK((dst = (char*)malloc(sizeof(char) * (len + 1))) == 0, 0);
 	while (++i < len)
 		dst[i] = src[i];

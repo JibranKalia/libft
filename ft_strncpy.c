@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 17:29:14 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/03 17:32:59 by jkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strncpy(char* dst, const char* src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	char	*cdst;
+
 	cdst = dst;
 	while (*src && len > 0)
 	{

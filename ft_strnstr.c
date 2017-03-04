@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 17:30:39 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/03 17:31:18 by jkalia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strnstr(const char *src, const char* to_find, size_t n)
+char	*ft_strnstr(const char *src, const char *to_find, size_t n)
 {
 	int			len;
 	const char	*limit;
@@ -8,7 +20,7 @@ char	*ft_strnstr(const char *src, const char* to_find, size_t n)
 	limit = src + n;
 	if (!*to_find)
 		return ((char*)src);
-	while(*src && src < limit)
+	while (*src && src < limit)
 	{
 		len = 0;
 		while (*src == *to_find && src < limit)

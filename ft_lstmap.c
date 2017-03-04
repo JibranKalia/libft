@@ -20,11 +20,11 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt))
 
 	org = f(lst);
 	ret = org;
-	while (lst->nxt)
+	while (lst->next)
 	{
-		ret->nxt = f(lst->nxt);
-		ret = ret->nxt;
-		lst = lst->nxt;
+		ret->next = f(lst->next);
+		ret = ret->next;
+		lst = lst->next;
 	}
 	return (org);
 }
