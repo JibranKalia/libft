@@ -1,9 +1,5 @@
-NAME 	:= libft.a
-CFLAGS 	+= -Wall -Wextra -Werror
-#CFLAGS	+= --pedantic-errors 
-#CFLAGS += -ggdb
-#CFLAGS	+= -fsanitize=address 
-#CFLAGS	+= -Wmissing-prototypes
+NAME 	= libft.a
+CFLAGS 	= -Wall -Wextra -Werror
 
 SRC = ft_putchar.c \
 	  ft_putchar_fd.c \
@@ -75,18 +71,13 @@ SRC = ft_putchar.c \
 	  ft_lstdelone.c \
 	  ft_lstmap.c \
 
-RED 	= \033[0;31m
-YELLOW 	= \033[0;33m
-NC		= \033[0m
-		
 .PHONY = all clean
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(OBJ): %.o: %.c
-	@echo "Compiling Object Files"
+$(OBJ): %.o: %.c 
 	@gcc -c $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJ)
@@ -94,42 +85,11 @@ $(NAME): $(OBJ)
 	@echo "Library Created" 
 
 clean: 
-	@rm -f $(OBJ) a.out
+	@rm -f $(OBJ)
 	@echo "\033[32mRemoved Object Files\033[0m"
 
 fclean: clean
 	@rm -f $(NAME) 
-	@echo "\033[32mRemoved Compiled Files.\033[0m" 
-
-re: fclean all 
-
-test: all 
-	@rm -f test
-	@echo "${YELLOW}Test1: Ctype Functions${NC}"
-	@gcc $(CFLAGS) test_ctype.c -L. -lft -o test1
-	@./test1
-	@echo "${YELLOW}Test2: Memset, Memchr, Memcpy, Memcmp, Memccpy, Memmove${NC}"
-	@gcc $(CFLAGS) test_mem.c -L. -lft -o test2
-	@./test2
-	@echo "${YELLOW}Test3: Bzero${NC}"
-	@gcc $(CFLAGS) test_bzero.c -L. -lft -o test3
-	@./test3
-	@echo "${YELLOW}Test4: String Tests${NC}"
-	@gcc $(CFLAGS) test_str.c -L. -lft -o test4
-	@./test4
-	@echo "${YELLOW}Test5: Strlcat Test${NC}"
-	@gcc $(CFLAGS) test_strlcat.c -L. -lft -o test5
-	@./test5
-	@echo "${YELLOW}Test6: Strnbr Test${NC}"
-	@gcc $(CFLAGS) test_nbr.c -L. -lft -o test6
-	@./test6
-	@echo "${YELLOW}Test7: Strltrim Test${NC}"
-	@gcc $(CFLAGS) test_strtrim.c -L. -lft -o test7
-	@./test7
-	@echo "${YELLOW}Test8: Strsplit Test${NC}"
-	@gcc $(CFLAGS) test_strsplit.c -L. -lft -o test8
-	@./test8
-	@echo "${YELLOW}Test9: Memmove Test${NC}"
-	@gcc $(CFLAGS) test_memmove.c -L. -lft -o test9
-	@./test9
-	@rm -f test1 test2 test3 test4 test5 test6 test7 test8 test9
+	@echo "\033[32mRemoved Library\033[0m" 
+	
+re: fclean all
