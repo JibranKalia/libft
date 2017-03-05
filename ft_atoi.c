@@ -32,7 +32,7 @@ int		ft_atoi(const char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	if (i > 19 && res > 9223372036854775807)
+	if (i > 19 || res > 9223372036854775807)
 		return ((neg_flag == 1) ? 0 : -1);
 	return (neg_flag * (int)res);
 }
