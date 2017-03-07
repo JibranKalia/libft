@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:26:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/03 17:28:39 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/07 12:07:25 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char		**ft_strsplit(char const *src, char c)
 		else
 		{
 			if (wrd_flag == 0)
-				CHK1((ret[i++] = each_block(src, c)) == 0, tbl_del(ret), 0);
+				CHK2((ret[i++] = each_block(src, c)) == 0, tbl_del(ret), free(ret), 0);
 			wrd_flag = 1;
 		}
 		++src;
