@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:58:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/03 21:11:15 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/07 11:33:32 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void				ft_striter(char *s, void (*f)(char*));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				**ft_strsplit(const char *src, char c);
 char				**strsplit(const char *src, char src_x);
+void				ft_tbldel(char **tbl);
 
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t len);

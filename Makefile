@@ -70,6 +70,7 @@ SRC = ft_putchar.c \
 	  ft_lstdel.c \
 	  ft_lstdelone.c \
 	  ft_lstmap.c \
+	  ft_tbldel.c \
 
 .PHONY = all clean
 
