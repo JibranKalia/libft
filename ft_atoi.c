@@ -33,6 +33,6 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	if (i > 19 || res > 9223372036854775807)
-		return ((neg_flag == 1) ? 0 : -1);
+		return ((neg_flag == 1) ? -1 : 0);
 	return (neg_flag * (int)res);
 }
