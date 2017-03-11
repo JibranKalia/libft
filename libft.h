@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:58:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/08 10:05:25 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/11 10:23:49 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
 # define CHK2(a, b, c, d) do{if(a){b; c; return(d);}}while(0)
 # define CHK3(a, b, c, d, e) do{if(a){b; c; d; return(e);}}while(0)
-# define CHK4(a, b, c, d, e, f) do{if(a){b; c; d; f; return(e);}}while(0)
+# define CHK4(a, b, c, d, e, f) do{if(a){b; c; d; e; return(f);}}while(0)
 # define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
 # define ISDIGIT(a) (a >= 48 && a <= 57)
 
