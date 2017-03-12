@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:58:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/12 11:15:46 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/12 11:20:19 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef enum		e_bool
 {
 	false,
 	true
-}					t_bool
+}					t_bool;
 
 t_list				*ft_lstnew(void const *src, size_t sze);
 void				ft_lstadd(t_list **alst, t_list *new);
