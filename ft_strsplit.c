@@ -6,27 +6,13 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:26:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/08 10:05:09 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/12 10:44:16 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-static void	tbl_del(char **src)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i])
-	{
-		free(src[i]);
-		++i;
-	}
-	free(src);
-	src = 0;
-}
 
 static int	num_block(char const *src, char c)
 {
@@ -89,7 +75,7 @@ char		**ft_strsplit(char const *src, char c)
 		else
 		{
 			if (wrd_flag == 0)
-				CHK1((ret[i++] = each_block(src, c)) == 0, tbl_del(ret), 0);
+				CHK1((ret[i++] = each_block(src, c)) == 0, ft_tbldel(ret), 0);
 			wrd_flag = 1;
 		}
 		++src;
