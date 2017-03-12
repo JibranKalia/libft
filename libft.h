@@ -6,29 +6,19 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:58:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/12 11:05:24 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/12 11:15:46 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <string.h>
-
-/**
-# define CHK(a, b) do{if(a){return(b);}}while(0)
-# define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
-# define CHK2(a, b, c, d) do{if(a){b; c; return(d);}}while(0)
-# define CHK3(a, b, c, d, e) do{if(a){b; c; d; return(e);}}while(0)
-# define CHK4(a, b, c, d, e, f) do{if(a){b; c; d; e; return(f);}}while(0)
-**/
-
-
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
 # define CHK2(a, b, c, d) if(1){if(a){b; c; return(d);}}
 # define CHK3(a, b, c, d, e) if(1){if(a){b; c; d; return(e);}}
 # define CHK4(a, b, c, d, e, f) if(1){if(a){b; c; d; e; return(f);}}
-
 # define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
 # define ISDIGIT(a) (a >= 48 && a <= 57)
 
@@ -38,6 +28,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef enum		e_bool
+{
+	false,
+	true
+}					t_bool
 
 t_list				*ft_lstnew(void const *src, size_t sze);
 void				ft_lstadd(t_list **alst, t_list *new);
