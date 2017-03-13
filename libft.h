@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:58:53 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/12 11:51:21 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/12 21:26:19 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdbool.h>
 
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
@@ -130,10 +131,4 @@ void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt));
 void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
-
-typedef enum		e_bool
-{
-	false,
-	true
-}					t_bool;
 #endif
