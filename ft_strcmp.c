@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:42:55 by jkalia            #+#    #+#             */
 /*   Updated: 2017/03/03 17:43:03 by jkalia           ###   ########.fr       */

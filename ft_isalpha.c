@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/27 11:09:36 by jkalia            #+#    #+#             */
 /*   Updated: 2017/03/12 21:24:26 by jkalia           ###   ########.fr       */

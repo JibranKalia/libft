@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 08:59:28 by jkalia            #+#    #+#             */
 /*   Updated: 2017/03/03 17:10:24 by jkalia           ###   ########.fr       */

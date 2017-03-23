@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tbldel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/07 11:30:39 by jkalia            #+#    #+#             */
 /*   Updated: 2017/03/13 21:13:55 by jkalia           ###   ########.fr       */

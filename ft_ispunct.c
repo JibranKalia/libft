@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ispunct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:03:45 by jkalia            #+#    #+#             */
 /*   Updated: 2017/03/03 17:04:24 by jkalia           ###   ########.fr       */

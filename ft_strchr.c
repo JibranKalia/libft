@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:43:41 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/18 22:35:53 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/03 17:43:55 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strchr(const char *src, int c)
 {
 	unsigned char	to_find;
 
-	CHK(!src, 0);
 	to_find = (unsigned char)c;
 	while (*src != '\0' && *src != to_find)
 		src++;
