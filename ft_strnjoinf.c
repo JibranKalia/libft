@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnjoinf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/03 17:19:11 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/23 20:41:42 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/23 20:37:15 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/23 20:45:35 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+char	*ft_strnjoinf(char *src1, size_t len1, char const *src2, size_t len2)
 {
-	const unsigned char		*csrc;
-	unsigned char			*cdst;
+	char *ret;
 
-	csrc = (const unsigned char*)src;
-	cdst = (unsigned char*)dst;
-	while (len-- > 0)
-		*cdst++ = *csrc++;
-	return (dst);
+	CHK(src1 == 0 || src2 == 0, 0);
+	CHK((ret = ft_strnew(len1 + len2)) == 0, NULL);
+	ft_memcpy(ret, src1, len1);
+	ft_memcpy(ret + len1, src2, len2);
+	free(src1);
+	return (ret);
 }
