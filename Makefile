@@ -1,5 +1,6 @@
 NAME 	= libft.a
-CFLAGS 	= -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -I includes/
 
 SRC = ft_putchar.c \
 	  ft_putchar_fd.c \
