@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 #include <stdlib.h>
 
 char	*ft_strnjoinf(char *src1, size_t len1, char const *src2, size_t len2)
