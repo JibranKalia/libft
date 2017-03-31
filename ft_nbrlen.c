@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/01 09:27:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/30 17:43:05 by jkalia           ###   ########.fr       */
+/*   Created: 2017/03/30 17:13:00 by jkalia            #+#    #+#             */
+/*   Updated: 2017/03/30 17:39:50 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdio.h>
 
-char			*ft_itoa(intmax_t nb)
+int8_t		ft_nbrlen(intmax_t src)
 {
-	int8_t		len;
-	uintmax_t	n;
-	char		*ret;
-	int			ngv_flag;
+	int8_t		ret;
 
-	ngv_flag = (nb < 0) ? 1 : 0;
-	n = nb;
-	n = (ngv_flag == 1) ? -nb : nb;
-	len = ft_nbrlen(n);
-	CHK((ret = ft_strnew(len)) == NULL, NULL);
-	CHK1(nb == 0, *ret = '0', ret);
-	if (ngv_flag == 1)
-		ret[0] = '-';
-	len = (ngv_flag == 0) ? len : len + 1;
-	ret[len] = '\0';
-	while (len > ngv_flag)
+	ret = (src < 0) ? 1 : 0;
+
+	while (ret != 0)
 	{
-		--len;
-		ret[len] = n % 10 + '0';
-		n /= 10;
+		src = src / 10;
+		++ret;
 	}
 	return (ret);
 }

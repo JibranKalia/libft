@@ -6,14 +6,17 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/23 20:45:34 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/03/30 17:40:53 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+
 # include <string.h>
+# include <limits.h>
+# include <stdint.h>
 
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
@@ -112,8 +115,9 @@ void				*ft_realloc(void *src, size_t srcsize, size_t newsize);
 */
 
 int					ft_atoi(const char *str);
-char				*ft_itoa(int nb);
+char				*ft_itoa(intmax_t nb);
 int					ft_abs(int i);
+int8_t				ft_nbrlen(intmax_t src);
 
 /*
 ** List
