@@ -65,7 +65,9 @@ SRC = ft_putchar.c \
 	  ft_strmapi.c \
 	  ft_atoi.c \
 	  ft_itoa.c \
+	  ft_itoa_base.c \
 	  ft_nbrlen.c \
+	  ft_nbrlen_base.c \
 	  ft_abs.c \
 	  ft_lstnew.c \
 	  ft_lstadd.c \
