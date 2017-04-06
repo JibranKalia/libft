@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 17:25:04 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/05 17:25:48 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/05 21:18:26 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,11 @@ int			ft_wchar_len(wint_t org)
 	if (org <= 0X7f)
 		return (1);
 	if (org <= 0x7ff)
-	{
-		printf("Wchar Len = 2\n");
 		return (2);
-	}
 	if (org <= 0xffff)
-	{
-		printf("Wchar Len = 3\n");
 		return (3);
-	}
 	if (org <= 0x10ffff)
-	{
-		printf("Wchar Len = 4\n");
 		return (4);
-	}
 	return (-1);
 }
 
