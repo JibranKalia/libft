@@ -6,13 +6,13 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 17:25:04 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/05 21:18:26 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/06 00:04:12 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int			ft_wchar_len(wint_t org)
+int		ft_wchar_len(wint_t org)
 {
 	if (org <= 0X7f)
 		return (1);

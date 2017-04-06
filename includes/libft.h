@@ -6,13 +6,12 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/05 21:21:01 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/06 00:05:19 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 
 # include <string.h>
 # include <stdint.h>
@@ -98,7 +97,8 @@ char				*ft_strmap(char const *src, char (*f)(char));
 char				*ft_strmapi(char const *src, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *src, unsigned int start, size_t len);
 char				*ft_strjoin(char const *src1, char const *src2);
-char				*ft_strnjoinf(char *src1, size_t len1, char const *src2, size_t len2);
+char				*ft_strnjoinf(char *s1, size_t l1,
+		char const *s2, size_t l2);
 char				*ft_strtrim(char const *src);
 char				**ft_strsplit(const char *src, char c);
 
