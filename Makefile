@@ -78,6 +78,7 @@ SRC = ft_putchar.c \
 	  ft_tbldel.c \
 	  ft_realloc.c \
 	  ft_wctomb.c \
+	  get_next_line.c \
 
 .PHONY = all clean
 

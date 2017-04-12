@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/06 00:05:19 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/12 12:29:45 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <string.h>
 # include <stdint.h>
 # include <wchar.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
@@ -145,4 +149,14 @@ void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt));
 void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
+
+/*
+** GETNEXTLINE
+*/
+
+# define GNL_BUFF_SIZE 1000
+# define GNL_MAX_FD 4864
+
+int					get_next_line(const int fd, char **line);
+
 #endif
