@@ -12,18 +12,18 @@
 
 #include <libftprintf.h>
 
-int8_t	ft_arr_init(t_arr *src, size_t cap)
+int8_t	ft_arr_init(t_printf_arr *src, size_t cap)
 {
 	if (src == 0 || cap == 0)
 		return (-1);
-	ft_bzero(src, sizeof(t_arr));
+	ft_bzero(src, sizeof(t_printf_arr));
 	CHK((src->ptr = ft_memalloc(cap)) == NULL, -1);
 	src->cap = cap;
 	src->len = 0;
 	return (0);
 }
 
-int8_t	ft_arr_sizechk(t_arr *src, size_t sze)
+int8_t	ft_arr_sizechk(t_printf_arr *src, size_t sze)
 {
 	CHK(src == 0, -1);
 	CHK(src->cap == 0, -1);
@@ -32,7 +32,7 @@ int8_t	ft_arr_sizechk(t_arr *src, size_t sze)
 	return (0);
 }
 
-int8_t	ft_arr_resize(t_arr *src, size_t sze)
+int8_t	ft_arr_resize(t_printf_arr *src, size_t sze)
 {
 	size_t	malloc_sze;
 	void	*tmp;
@@ -54,7 +54,7 @@ int8_t	ft_arr_resize(t_arr *src, size_t sze)
 	return (0);
 }
 
-int8_t	ft_arr_insertn(t_arr *dst, size_t index,
+int8_t	ft_arr_insertn(t_printf_arr *dst, size_t index,
 		const void *src, size_t src_len)
 {
 	CHK(dst == 0, -1);
@@ -68,7 +68,7 @@ int8_t	ft_arr_insertn(t_arr *dst, size_t index,
 	return (0);
 }
 
-int8_t	ft_arr_appendn(t_arr *dst, const void *src, size_t n)
+int8_t	ft_arr_appendn(t_printf_arr *dst, const void *src, size_t n)
 {
 	CHK(dst == 0, -1);
 	CHK(dst->cap == 0, -1);

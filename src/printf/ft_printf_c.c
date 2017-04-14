@@ -12,7 +12,7 @@
 
 #include <libftprintf.h>
 
-int8_t		ft_printf_percent(t_arr *ret, const char **fmt,
+int8_t		ft_printf_percent(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	(void)clone;
@@ -22,7 +22,7 @@ int8_t		ft_printf_percent(t_arr *ret, const char **fmt,
 	return (ft_printf_append(ret, fmt, x));
 }
 
-int8_t		ft_printf_wchar(t_arr *ret, const char **fmt,
+int8_t		ft_printf_wchar(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	int				len;
@@ -40,7 +40,7 @@ int8_t		ft_printf_wchar(t_arr *ret, const char **fmt,
 ** 'C' is treated as c with l modifider.
 */
 
-int8_t		ft_printf_c(t_arr *ret, const char **fmt,
+int8_t		ft_printf_c(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	unsigned char	tmp[1];

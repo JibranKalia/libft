@@ -120,7 +120,7 @@ char	g_colors[34][2][15] = {
 	{"{eoc}", "\033[0m"},
 	{"{noc}", "\033[0m"}};
 
-int8_t	ft_printf_color(t_arr *ret, const char **fmt,
+int8_t	ft_printf_color(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	int	i;

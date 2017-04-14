@@ -13,16 +13,16 @@
 #ifndef PRINTF_ARRAY_H
 # define PRINTF_ARRAY_H
 
-typedef struct		s_arr
+typedef struct		s_printf_arr
 {
 	char			*ptr;
 	size_t			len;
 	size_t			cap;
-}					t_arr;
+}					t_printf_arr;
 
 typedef struct		s_printf
 {
-	t_arr			extra;
+	t_printf_arr	extra;
 	unsigned int	is_prec:1;
 	int				prec;
 	int				width;
@@ -35,14 +35,14 @@ typedef struct		s_printf
 	char			pad;
 }					t_printf;
 
-void				ft_arr_del(t_arr *src);
-char				*ft_arrtostr(t_arr *src);
-int8_t				ft_arr_init(t_arr *src, size_t cap);
-int8_t				ft_arr_appendn(t_arr *dst, const void *src, size_t n);
-int8_t				ft_arr_append_arr(t_arr *dst, t_arr *src);
-int8_t				ft_arr_resize(t_arr *src, size_t sze);
-int8_t				ft_arr_sizechk(t_arr *src, size_t sze);
-int8_t				ft_arr_insertn(t_arr *dst, size_t index,
+void				ft_arr_del(t_printf_arr *src);
+char				*ft_arrtostr(t_printf_arr *src);
+int8_t				ft_arr_init(t_printf_arr *src, size_t cap);
+int8_t				ft_arr_appendn(t_printf_arr *dst, const void *src, size_t n);
+int8_t				ft_arr_append_arr(t_printf_arr *dst, t_printf_arr *src);
+int8_t				ft_arr_resize(t_printf_arr *src, size_t sze);
+int8_t				ft_arr_sizechk(t_printf_arr *src, size_t sze);
+int8_t				ft_arr_insertn(t_printf_arr *dst, size_t index,
 		const void *src, size_t src_len);
 uintmax_t			ft_printf_uox_len(t_printf *x, va_list clone);
 

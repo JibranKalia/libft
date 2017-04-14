@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 20:42:59 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/11 17:58:53 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/14 11:05:56 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** flag ' ' is ignored if '+' is present.
 */
 
-int8_t	ft_printf_flags(t_arr *ret, const char **fmt,
+int8_t	ft_printf_flags(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	(void)ret;
@@ -48,7 +48,7 @@ int8_t	ft_printf_flags(t_arr *ret, const char **fmt,
 ** If width is negative. Set '-' flag.
 */
 
-int8_t	ft_printf_width(t_arr *ret, const char **fmt,
+int8_t	ft_printf_width(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	size_t	res;
@@ -75,7 +75,8 @@ int8_t	ft_printf_width(t_arr *ret, const char **fmt,
 	return (0);
 }
 
-int8_t	ft_printf_dot(t_arr *ret, const char **fmt, t_printf *x, va_list clone)
+int8_t	ft_printf_dot(t_printf_arr *ret, const char **fmt,
+		t_printf *x, va_list clone)
 {
 	int res;
 
@@ -114,7 +115,7 @@ int8_t	ft_printf_dot(t_arr *ret, const char **fmt, t_printf *x, va_list clone)
 char	g_length_spec[7] = {"hhlljzL"};
 #define ISLENSPEC(a) (a == 'h' || a == 'l' || a == 'j' || a == 'z' || a == 'L')
 
-int8_t	ft_printf_length(t_arr *ret, const char **fmt,
+int8_t	ft_printf_length(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	int		index;

@@ -12,7 +12,7 @@
 
 #include <libftprintf.h>
 
-int8_t	ft_arr_append_arr(t_arr *dst, t_arr *src)
+int8_t	ft_arr_append_arr(t_printf_arr *dst, t_printf_arr *src)
 {
 	CHK(dst == 0, -1);
 	CHK(dst->cap == 0, -1);
@@ -22,23 +22,23 @@ int8_t	ft_arr_append_arr(t_arr *dst, t_arr *src)
 	return (0);
 }
 
-void	ft_arr_del(t_arr *src)
+void	ft_arr_del(t_printf_arr *src)
 {
 	if (src == 0)
 		return ;
 	if (src->cap > 0)
 		free(src->ptr);
-	ft_bzero(src, sizeof(t_arr));
+	ft_bzero(src, sizeof(t_printf_arr));
 }
 
-char	*ft_arrtostr(t_arr *src)
+char	*ft_arrtostr(t_printf_arr *src)
 {
 	CHK(src == 0, 0);
 	CHK(src->cap == 0, 0);
 	return (src->ptr);
 }
 
-int8_t	ft_printf_append(t_arr *ret, const char **fmt, t_printf *x)
+int8_t	ft_printf_append(t_printf_arr *ret, const char **fmt, t_printf *x)
 {
 	CHK2((ft_arr_append_arr(ret, &x->extra)) == -1,
 			ft_arr_del(ret), ft_arr_del(&x->extra), -1);

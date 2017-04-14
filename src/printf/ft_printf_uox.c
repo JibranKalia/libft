@@ -36,7 +36,7 @@ uintmax_t	ft_printf_uox_len(t_printf *x, va_list clone)
 ** If both converted value and precision is 0 nothing is printed
 */
 
-int8_t		ft_printf_o(t_arr *ret, const char **fmt,
+int8_t		ft_printf_o(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	uintmax_t	org;
@@ -66,7 +66,7 @@ int8_t		ft_printf_o(t_arr *ret, const char **fmt,
 ** If both converted value and precision is 0 nothing is printed
 */
 
-int8_t		ft_printf_u(t_arr *ret, const char **fmt,
+int8_t		ft_printf_u(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	uintmax_t	org;
@@ -111,7 +111,7 @@ static void	handle_upper(char *str, char c)
 ** If both converted value and precision is 0 nothing is printed
 */
 
-int8_t		ft_printf_x(t_arr *ret, const char **fmt,
+int8_t		ft_printf_x(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	uintmax_t	org;

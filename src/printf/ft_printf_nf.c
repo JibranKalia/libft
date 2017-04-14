@@ -12,7 +12,7 @@
 
 #include <libftprintf.h>
 
-int8_t		ft_printf_f(t_arr *ret, const char **fmt,
+int8_t		ft_printf_f(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	(void)ret;
@@ -41,7 +41,7 @@ intmax_t	*ft_printf_n_len(t_printf *x, va_list clone)
 	return (0);
 }
 
-int8_t		ft_printf_n(t_arr *ret, const char **fmt,
+int8_t		ft_printf_n(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	intmax_t	*i;

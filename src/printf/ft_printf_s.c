@@ -30,7 +30,7 @@ size_t	ft_wcslen(wchar_t *wstr)
 	return (len);
 }
 
-int8_t	ft_printf_wstr(t_arr *ret, const char **fmt,
+int8_t	ft_printf_wstr(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	wchar_t	*tmp;
@@ -62,7 +62,7 @@ int8_t	ft_printf_wstr(t_arr *ret, const char **fmt,
 ** 'S' is treated as s with l modifider.
 */
 
-int8_t	ft_printf_s(t_arr *ret, const char **fmt,
+int8_t	ft_printf_s(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	char	*tmp;

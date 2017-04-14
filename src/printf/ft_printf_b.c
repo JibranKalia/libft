@@ -12,7 +12,7 @@
 
 #include <libftprintf.h>
 
-int8_t		ft_printf_b(t_arr *ret, const char **fmt,
+int8_t		ft_printf_b(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	uintmax_t	org;

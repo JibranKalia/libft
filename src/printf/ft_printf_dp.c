@@ -38,7 +38,7 @@ intmax_t	ft_printf_d_len(t_printf *x, va_list clone)
 ** If the number is negative the extra zero padding has to be after sign.
 */
 
-int8_t		ft_printf_p(t_arr *ret, const char **fmt,
+int8_t		ft_printf_p(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	uintmax_t	org;
@@ -68,7 +68,7 @@ int8_t		ft_printf_p(t_arr *ret, const char **fmt,
 ** If both value and precision are 0 no characters printed.
 */
 
-int8_t		ft_printf_d(t_arr *ret, const char **fmt,
+int8_t		ft_printf_d(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	intmax_t	org;

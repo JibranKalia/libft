@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 22:57:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/13 13:26:16 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/14 11:09:12 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char		g_tbl[LEN1][LEN2] =
 	{"a"}, {"A"}, {"n"}, {"{"},
 	{"b"}};
 
-static int8_t	(*g_func[LEN1]) (t_arr *ret, const char **fmt,
+static int8_t	(*g_func[LEN1]) (t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone) = {
 	ft_printf_flags, ft_printf_flags, ft_printf_flags, ft_printf_flags,
 	ft_printf_flags, ft_printf_width, ft_printf_width, ft_printf_width,
@@ -64,7 +64,7 @@ static int8_t	check(const char **fmt, int i)
 ** function. Reset the counter if a type is not reached.
 */
 
-static int		choosetype(t_arr *ret, const char **fmt,
+static int		choosetype(t_printf_arr *ret, const char **fmt,
 		t_printf *x, va_list clone)
 {
 	int i;
@@ -97,9 +97,9 @@ static int		choosetype(t_arr *ret, const char **fmt,
 
 int				dispatch(char **final, const char *fmt, va_list clone)
 {
-	size_t			i;
-	t_arr			ret;
-	t_printf		x;
+	size_t				i;
+	t_printf_arr		ret;
+	t_printf			x;
 
 	CHK((ft_arr_init(&ret, ft_strlen(fmt) + 20)) == -1, -1);
 	CHK((ft_printf_init(&x)) == -1, -1);

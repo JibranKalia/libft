@@ -39,27 +39,27 @@ int		ft_vasprintf(char **ret, const char *fmt, va_list ap);
 ** Flags
 */
 
-int8_t	ft_printf_flags(t_arr *r, const char **f, t_printf *x, va_list clone);
+int8_t	ft_printf_flags(t_printf_arr *r, const char **f, t_printf *x, va_list clone);
 
 /*
 ** Width
 */
 
-int8_t	ft_printf_width(t_arr *r, const char **f, t_printf *x, va_list clone);
+int8_t	ft_printf_width(t_printf_arr *r, const char **f, t_printf *x, va_list clone);
 int8_t	handle_width(t_printf *x, char c);
 
 /*
 ** Precision
 */
 
-int8_t	ft_printf_dot(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_dot(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
 int8_t	handle_prec(t_printf *x, intmax_t org);
 
 /*
 ** Length
 */
 
-int8_t	ft_printf_length(t_arr *r, const char **f, t_printf *x, va_list clone);
+int8_t	ft_printf_length(t_printf_arr *r, const char **f, t_printf *x, va_list clone);
 
 /*
 ** Functions
@@ -67,17 +67,17 @@ int8_t	ft_printf_length(t_arr *r, const char **f, t_printf *x, va_list clone);
 
 int		dispatch(char **final, const char *fmt, va_list clone);
 int8_t	ft_printf_init(t_printf *x);
-int8_t	ft_printf_append(t_arr *ret, const char **fmt, t_printf *x);
-int8_t	ft_printf_c(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_b(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_d(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_percent(t_arr *r, const char **f, t_printf *x, va_list cln);
-int8_t	ft_printf_p(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_s(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_o(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_u(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_n(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_x(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_f(t_arr *ret, const char **fmt, t_printf *x, va_list clone);
-int8_t	ft_printf_color(t_arr *r, const char **f, t_printf *x, va_list clone);
+int8_t	ft_printf_append(t_printf_arr *ret, const char **fmt, t_printf *x);
+int8_t	ft_printf_c(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_b(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_d(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_percent(t_printf_arr *r, const char **f, t_printf *x, va_list cln);
+int8_t	ft_printf_p(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_s(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_o(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_u(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_n(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_x(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_f(t_printf_arr *ret, const char **fmt, t_printf *x, va_list clone);
+int8_t	ft_printf_color(t_printf_arr *r, const char **f, t_printf *x, va_list clone);
 #endif
