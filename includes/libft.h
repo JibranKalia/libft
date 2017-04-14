@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/12 12:29:45 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/13 16:54:27 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <sys/uio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <libftprintf.h>
 
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
@@ -28,8 +29,21 @@
 # define CHK4(a, b, c, d, e, f) if(1){if(a){b; c; d; e; return(f);}}
 
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
-# define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
+# define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
 # define ISDIGIT(a) (a >= 48 && a <= 57)
+# define ISUPPER(a) (a >= 'A' && a <= 'Z')
+# define ISLOWER(a) (a >= 'a' && a <= 'z')
+# define ISALPHA(a) (ISUPPER(a) || ISLOWER(a))
+# define ISALNUM(a) (ISALPHA(a) || ISDIGIT(a))
+# define ISASCII(a) (a >= 0 && a <= 127)
+# define ISBLANK(a) (a == ' ' || a == '\t')
+# define ISCNTRL(a) ((a >= 0 && a <= 37) || (a == 127))
+# define ISGRAPH(a) (a >= 33 && a <= 126)
+# define ISPRINT(a) (a >= 32 && a <= 126)
+# define ISSPACE(a) ((a >= 9 && a <= 13) || (a == 32))
+# define ISXDIGIT(a) (ISDIGIT(a)|| (a >= 65 && a <= 70) || (a >= 97 && a <= 102)
+# define TOLOWER(a) (a >= 'A' && a <= 'Z' ? a + 32 : a)
+# define TOUPPER(a) (a >= 'a' && a <= 'z' ? a - 32 : a)
 
 /*
 ** Ctype

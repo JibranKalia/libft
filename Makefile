@@ -19,6 +19,9 @@ STR			:=  ft_putendl ft_putendl_fd ft_putstr ft_putstr_fd ft_strcat ft_strchr \
 					ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_strndup ft_strnequ \
 					ft_strnew ft_strnjoinf ft_strnlen ft_strnstr ft_strrchr ft_strsplit \
 					ft_strstr ft_strsub ft_strtrim
+PRINTF		:= ft_printf_1 ft_printf_2 ft_printf_dispatcher ft_printf_handle ft_printf_flags \
+					ft_printf_array_1 ft_printf_array_2 ft_printf_c ft_printf_dp \
+					ft_printf_nf ft_printf_s ft_printf_b ft_printf_uox
 
 FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix ctype/, $(CTYPE)) \
@@ -29,6 +32,7 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix str/, $(STR)) \
 				$(addprefix wchar/, $(WCHAR)) \
 				$(addprefix tbl/, $(TBL)) \
+				$(addprefix printf/, $(PRINTF)) \
 
 .PHONY = all clean fclean
 
