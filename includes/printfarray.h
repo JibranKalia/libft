@@ -6,12 +6,12 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/05 23:33:08 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/13 16:56:41 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/14 11:15:38 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_ARRAY_H
-# define PRINTF_ARRAY_H
+#ifndef PRINTFARRAY_H
+# define PRINTFARRAY_H
 
 typedef struct		s_printf_arr
 {
@@ -38,12 +38,13 @@ typedef struct		s_printf
 void				ft_arr_del(t_printf_arr *src);
 char				*ft_arrtostr(t_printf_arr *src);
 int8_t				ft_arr_init(t_printf_arr *src, size_t cap);
-int8_t				ft_arr_appendn(t_printf_arr *dst, const void *src, size_t n);
 int8_t				ft_arr_append_arr(t_printf_arr *dst, t_printf_arr *src);
 int8_t				ft_arr_resize(t_printf_arr *src, size_t sze);
 int8_t				ft_arr_sizechk(t_printf_arr *src, size_t sze);
 int8_t				ft_arr_insertn(t_printf_arr *dst, size_t index,
 		const void *src, size_t src_len);
+int8_t				ft_arr_appendn(t_printf_arr *dst,
+		const void *src, size_t n);
 uintmax_t			ft_printf_uox_len(t_printf *x, va_list clone);
 
 #endif
