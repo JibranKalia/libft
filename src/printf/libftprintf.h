@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 14:07:51 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/14 11:14:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/17 11:54:35 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,11 @@
 # include <limits.h>
 # include <stdint.h>
 # include <wchar.h>
-# include "libft.h"
+# include <libft.h>
 # include "printfarray.h"
 # define ISWIDTH(a) (a > 48 && a <= 57)
 # define ISSIGN(a) (a == '+' || a == '-')
 # define ISFLAG(a) (a == '+' || a == '-' || a == ' ' || a == '#' || a == '0')
-
-int		ft_printf(const char *in, ...);
-int		ft_dprintf(int fd, const char *in, ...);
-int		ft_sprintf(char *ret, const char *fmt, ...);
-int		ft_snprintf(char *ret, size_t size, const char *fmt, ...);
-int		ft_asprintf(char **ret, const char *fmt, ...);
-int		ft_vprintf(const char *fmt, va_list ap);
-int		ft_vsprintf(char *ret, const char *fmt, va_list ap);
-int		ft_vdprintf(int fd, const char *fmt, va_list ap);
-int		ft_vasprintf(char **ret, const char *fmt, va_list ap);
 
 /*
 ** Flags

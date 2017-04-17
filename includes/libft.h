@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/13 16:54:27 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/17 11:55:19 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <sys/uio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <libftprintf.h>
 
 # define CHK(a, b) if(1){if(a){return(b);}}
 # define CHK1(a, b, c) if(1){if(a){b; return(c);}}
@@ -172,5 +171,19 @@ void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
 # define GNL_MAX_FD 4864
 
 int					get_next_line(const int fd, char **line);
+
+/*
+** PRINTF
+*/
+
+int		ft_printf(const char *in, ...);
+int		ft_dprintf(int fd, const char *in, ...);
+int		ft_sprintf(char *ret, const char *fmt, ...);
+int		ft_snprintf(char *ret, size_t size, const char *fmt, ...);
+int		ft_asprintf(char **ret, const char *fmt, ...);
+int		ft_vprintf(const char *fmt, va_list ap);
+int		ft_vsprintf(char *ret, const char *fmt, va_list ap);
+int		ft_vdprintf(int fd, const char *fmt, va_list ap);
+int		ft_vasprintf(char **ret, const char *fmt, va_list ap);
 
 #endif
