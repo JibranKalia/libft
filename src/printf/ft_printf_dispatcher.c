@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 22:57:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/17 11:54:48 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/17 11:58:29 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ static int		choosetype(t_printf_arr *ret, const char **fmt,
 ** move to function above and look for appropriate function in Jump Table.
 */
 
-int				dispatch(char **final, const char *fmt, va_list clone)
+int				ft_printf_dispatch(char **final, const char *fmt, va_list clone)
 {
 	size_t				i;
 	t_printf_arr		ret;

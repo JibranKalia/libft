@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 14:38:22 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/17 11:54:41 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/17 11:59:04 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int		ft_vasprintf(char **ret, const char *fmt, va_list ap)
 		return (ft_strlen(fmt));
 	}
 	va_copy(clone, ap);
-	len = dispatch(ret, fmt, clone);
+	len = ft_printf_dispatch(ret, fmt, clone);
 	va_end(clone);
 	return (len);
 }

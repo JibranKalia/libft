@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/23 14:07:51 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/17 11:54:35 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/17 11:57:56 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int8_t	ft_printf_length(t_printf_arr *r, const char **f,
 ** Functions
 */
 
-int		dispatch(char **final, const char *fmt, va_list clone);
+int		ft_printf_dispatch(char **final, const char *fmt, va_list clone);
 int8_t	ft_printf_init(t_printf *x);
 int8_t	ft_printf_append(t_printf_arr *ret, const char **fmt, t_printf *x);
 int8_t	ft_printf_c(t_printf_arr *r, const char **f, t_printf *x, va_list c);
