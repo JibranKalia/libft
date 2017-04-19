@@ -2,9 +2,6 @@ NAME		:= libft.a
 CFLAGS		+= -Wall -Wextra -Werror
 CFLAGS		+= -I includes/
 
-GNL			:= get_next_line
-TBL			:= ft_tbldel
-WCHAR		:= ft_wctomb
 CHR 		:= ft_putchar ft_putchar_fd
 LST			:= ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew
 NBR			:= ft_atoi ft_itoa ft_itoa_base ft_nbrlen ft_nbrlen_base ft_putnbr ft_putnbr_fd
@@ -18,20 +15,17 @@ STR			:=  ft_putendl ft_putendl_fd ft_putstr ft_putstr_fd ft_strcat ft_strchr \
 					ft_striter ft_striteri ft_strjoin ft_strlcat ft_strlen ft_strmap \
 					ft_strmapi ft_strncat ft_strncmp ft_strncpy ft_strndup ft_strnequ \
 					ft_strnew ft_strnjoinf ft_strnlen ft_strnstr ft_strrchr ft_strsplit \
-					ft_strstr ft_strsub ft_strtrim
+					ft_strstr ft_strsub ft_strtrim get_next_line ft_tbldel ft_wctomb
 PRINTF		:= ft_printf_1 ft_printf_2 ft_printf_dispatcher ft_printf_handle ft_printf_flags \
 					ft_printf_array_1 ft_printf_array_2 ft_printf_c ft_printf_dp \
 					ft_printf_nf ft_printf_s ft_printf_b ft_printf_uox
 
 FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix ctype/, $(CTYPE)) \
-				$(addprefix gnl/, $(GNL)) \
 				$(addprefix lst/, $(LST)) \
 				$(addprefix mem/, $(MEM)) \
 				$(addprefix nbr/, $(NBR)) \
 				$(addprefix str/, $(STR)) \
-				$(addprefix wchar/, $(WCHAR)) \
-				$(addprefix tbl/, $(TBL)) \
 				$(addprefix printf/, $(PRINTF)) \
 
 .PHONY = all clean fclean
