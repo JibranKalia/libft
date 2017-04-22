@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/03 17:44:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/03/03 17:44:23 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/21 22:15:43 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	ft_strclr(char *src)
 		return ;
 	while (*src)
 	{
-		*src = '\0';
+		*src = 0;
 		src++;
 	}
+	src = NULL;
 }
