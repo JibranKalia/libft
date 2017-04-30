@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/22 13:11:50 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/28 13:10:54 by aakin-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,6 +165,8 @@ void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt));
 void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
+void				ft_lstappend(t_list **alst, t_list *new);
+void				ft_lstfree(t_list **alst);
 
 /*
 ** GETNEXTLINE
@@ -188,5 +190,21 @@ int					ft_vprintf(const char *fmt, va_list ap);
 int					ft_vsprintf(char *ret, const char *fmt, va_list ap);
 int					ft_vdprintf(int fd, const char *fmt, va_list ap);
 int					ft_vasprintf(char **ret, const char *fmt, va_list ap);
+
+/*
+** Binary Search Trees
+*/
+
+typedef struct		s_btree
+{
+	int				item;
+	struct s_btree	*left;
+	struct s_btree	*right;
+}					t_btree;
+t_btree				*btree_create_node(int item);
+void				btree_add_node(t_btree **root, t_btree *node);
+void				btree_apply_inorder(t_btree *root, void (*applyf)(int));
+void				btree_apply_postorder(t_btree *root, void (*applyf)(int));
+void				btree_apply_preorder(t_btree *root, void (*applyf)(int));
 
 #endif

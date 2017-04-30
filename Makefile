@@ -3,7 +3,7 @@ CFLAGS		+= -Wall -Wextra -Werror
 CFLAGS		+= -I includes/
 
 CHR 		:= ft_putchar ft_putchar_fd
-LST			:= ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew
+LST			:= ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew ft_lstappend ft_lstfree
 NBR			:= ft_atoi ft_itoa ft_itoa_base ft_nbrlen ft_nbrlen_base ft_putnbr ft_putnbr_fd
 MEM			:= ft_bzero ft_memalloc ft_memccpy ft_memchr ft_memcmp \
 					ft_memcpy ft_memdel ft_memmove ft_memset ft_realloc
@@ -19,6 +19,8 @@ STR			:=  ft_putendl ft_putendl_fd ft_putstr ft_putstr_fd ft_strcat ft_strchr \
 PRINTF		:= ft_printf_1 ft_printf_2 ft_printf_dispatcher ft_printf_handle ft_printf_flags \
 					ft_printf_array_1 ft_printf_array_2 ft_printf_c ft_printf_dp \
 					ft_printf_nf ft_printf_s ft_printf_b ft_printf_uox
+TREES		:= btree_add_node btree_apply_inorder btree_apply_postorder btree_apply_preorder \
+					btree_create_node
 
 FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix ctype/, $(CTYPE)) \
@@ -27,6 +29,7 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix nbr/, $(NBR)) \
 				$(addprefix str/, $(STR)) \
 				$(addprefix printf/, $(PRINTF)) \
+				$(addprefix trees/, $(TREES)) \
 
 .PHONY = all clean fclean
 
