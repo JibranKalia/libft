@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/28 13:10:54 by aakin-al         ###   ########.fr       */
+/*   Updated: 2017/04/30 07:48:59 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ char				*ft_strmap(char const *src, char (*f)(char));
 char				*ft_strmapi(char const *src, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *src, unsigned int start, size_t len);
 char				*ft_strjoin(char const *src1, char const *src2);
-char				*ft_strjoinf(char *s1, char *s2, int d);
+char				*ft_strjoinf(char *s1, char *s2, size_t d);
 char				*ft_strtrim(char const *src);
 char				**ft_strsplit(const char *src, char c);
 int					ft_countwords(char const *src, char c);
