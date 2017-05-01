@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 13:36:15 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 14:01:36 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,5 +257,5 @@ int					arr_expand(t_arr *array);
 int					arr_contract(t_arr *array);
 int					arr_push(t_arr *array, void *el);
 void				*arr_pop(t_arr *array);
-void				arr_clear_destroy(t_arr *array);
+void				arr_del(t_arr *array);
 #endif

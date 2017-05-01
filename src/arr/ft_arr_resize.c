@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_2.c                                       :+:      :+:    :+:   */
+/*   ft_arr_resize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/01 10:23:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 10:31:22 by jkalia           ###   ########.fr       */
+/*   Created: 2017/05/01 13:54:11 by jkalia            #+#    #+#             */
+/*   Updated: 2017/05/01 13:54:31 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-void	arr_clear(t_arr *array)
-{
-	int		i;
-
-	i = 0;
-	if (array->element_size > 0)
-	{
-		while (i < array->max)
-		{
-			if (array->contents[i] != NULL)
-				free(array->contents[i]);
-			++i;
-		}
-	}
-}
 
 int		arr_resize(t_arr *array, size_t newsize)
 {

@@ -1,48 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_1.c                                       :+:      :+:    :+:   */
+/*   ft_arr_create.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/01 10:23:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 13:46:25 by jkalia           ###   ########.fr       */
+/*   Created: 2017/05/01 13:58:41 by jkalia            #+#    #+#             */
+/*   Updated: 2017/05/01 13:59:01 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-int		arr_set(t_arr *array, int i, void *el)
-{
-	CHECK(i > array->max, RETURN(-1), "arr attempt to set past max");
-	if (i > array->end)
-		array->end = i;
-	array->contents[i] = el;
-	return (0);
-}
-
-void	*arr_get(t_arr *array, int i)
-{
-	CHECK(i > array->max, RETURN(NULL), "arr attempt to get past max");
-	return (array->contents[i]);
-}
-
-void	*arr_remove(t_arr *array, int i)
-{
-	void *elm;
-
-	CHECK(i > array->max, RETURN(NULL), "arr attempt to get past max");
-	elm = array->contents[i];
-	array->contents[i] = NULL;
-	return (elm);
-}
-
-void	*arr_new(t_arr *array)
-{
-	CHECK(array->element_size <= 0,
-			RETURN(NULL), "Can't use arr_new on 0 size arrs.");
-	return (ft_memalloc(array->element_size * 1));
-}
 
 t_arr	*arr_create(size_t element_size, size_t initial_max)
 {
