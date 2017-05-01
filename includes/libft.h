@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/30 21:10:41 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 13:36:15 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@
 # define CHECK_MEM1(a, b, c) CHECK1((!a), b, c, "Out of Memory")
 # define CHECK_MEM2(a, b, c, d) CHECK2((!a), b, c, d, "Out of Memory")
 # define DEBUG(M, ...) ft_log_debug(__FILE__, __LINE__, M, ##__VA_ARGS__)
+# define RETURN(a) return(a)
 
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 # define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
@@ -212,11 +213,11 @@ typedef struct		s_btree
 	struct s_btree	*left;
 	struct s_btree	*right;
 }					t_btree;
-t_btree					*btree_create_node(int item);
-void					btree_add_node(t_btree **root, t_btree *node);
-void					btree_apply_inorder(t_btree *root, void (*applyf)(int));
-void					btree_apply_postorder(t_btree *root, void (*applyf)(int));
-void					btree_apply_preorder(t_btree *root, void (*applyf)(int));
+t_btree				*btree_create_node(int item);
+void				btree_add_node(t_btree **root, t_btree *node);
+void				btree_apply_inorder(t_btree *root, void (*applyf)(int));
+void				btree_apply_postorder(t_btree *root, void (*applyf)(int));
+void				btree_apply_preorder(t_btree *root, void (*applyf)(int));
 
 /*
 ** LOG
@@ -236,26 +237,25 @@ int					ft_log_err(char *file, int line, char *message, ...);
 # define ARR_FREE(E) free((E))
 # define DEFAULT_EXPAND_RATE 300
 
-typedef struct				s_arr
+typedef struct		s_arr
 {
 	int				end;
 	int				max;
-	size_t				element_size;
-	size_t				expand_rate;
-	void				**contents;
+	size_t			element_size;
+	size_t			expand_rate;
+	void			**contents;
 }					t_arr;
 
-void					arr_set(t_arr *array, int i, void *el);
-void					*arr_get(t_arr *array, int i);
-void					*arr_remove(t_arr *array, int i);
-void					*arr_new(t_arr *array);
-t_arr					*arr_create(size_t element_size, size_t initial_max);
-void					arr_destroy(t_arr *array);
-void					arr_clear(t_arr *array);
+int					arr_set(t_arr *array, int i, void *el);
+void				*arr_get(t_arr *array, int i);
+void				*arr_remove(t_arr *array, int i);
+void				*arr_new(t_arr *array);
+t_arr				*arr_create(size_t element_size, size_t initial_max);
+void				arr_destroy(t_arr *array);
+void				arr_clear(t_arr *array);
 int					arr_expand(t_arr *array);
 int					arr_contract(t_arr *array);
 int					arr_push(t_arr *array, void *el);
-void					*arr_pop(t_arr *array);
-void					arr_clear_destroy(t_arr *array);
-
+void				*arr_pop(t_arr *array);
+void				arr_clear_destroy(t_arr *array);
 #endif
