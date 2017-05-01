@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 14:01:36 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 14:55:27 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,6 +224,7 @@ void				btree_apply_preorder(t_btree *root, void (*applyf)(int));
 */
 
 int					ft_log_err(char *file, int line, char *message, ...);
+int					ft_log_debug(char *file, int line, char *message, ...);
 
 /*
 ** ARR
