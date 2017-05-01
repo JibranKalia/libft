@@ -22,6 +22,7 @@ PRINTF		:= ft_printf_1 ft_printf_2 ft_printf_dispatcher ft_printf_handle ft_prin
 					ft_printf_nf ft_printf_s ft_printf_b ft_printf_uox
 TREES		:= btree_add_node btree_apply_inorder btree_apply_postorder btree_apply_preorder \
 					btree_create_node
+ARR		:= ft_arr
 
 FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix ctype/, $(CTYPE)) \

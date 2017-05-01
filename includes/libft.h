@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/04/30 13:33:08 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/04/30 21:10:41 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,15 +212,50 @@ typedef struct		s_btree
 	struct s_btree	*left;
 	struct s_btree	*right;
 }					t_btree;
-t_btree				*btree_create_node(int item);
-void				btree_add_node(t_btree **root, t_btree *node);
-void				btree_apply_inorder(t_btree *root, void (*applyf)(int));
-void				btree_apply_postorder(t_btree *root, void (*applyf)(int));
-void				btree_apply_preorder(t_btree *root, void (*applyf)(int));
+t_btree					*btree_create_node(int item);
+void					btree_add_node(t_btree **root, t_btree *node);
+void					btree_apply_inorder(t_btree *root, void (*applyf)(int));
+void					btree_apply_postorder(t_btree *root, void (*applyf)(int));
+void					btree_apply_preorder(t_btree *root, void (*applyf)(int));
 
 /*
-** Binary Search Trees
+** LOG
 */
 
 int					ft_log_err(char *file, int line, char *message, ...);
+
+/*
+** ARR
+*/
+
+# define ARR_LAST(A) ((A)->contents[(A)->end - 1])
+# define ARR_FIRST(A) ((A)->contents[0])
+# define ARR_END(A) ((A)->end)
+# define ARR_COUNT(A) ARR_END(A)
+# define ARR_MAX(A) ((A)->max)
+# define ARR_FREE(E) free((E))
+# define DEFAULT_EXPAND_RATE 300
+
+typedef struct				s_arr
+{
+	int				end;
+	int				max;
+	size_t				element_size;
+	size_t				expand_rate;
+	void				**contents;
+}					t_arr;
+
+void					arr_set(t_arr *array, int i, void *el);
+void					*arr_get(t_arr *array, int i);
+void					*arr_remove(t_arr *array, int i);
+void					*arr_new(t_arr *array);
+t_arr					*arr_create(size_t element_size, size_t initial_max);
+void					arr_destroy(t_arr *array);
+void					arr_clear(t_arr *array);
+int					arr_expand(t_arr *array);
+int					arr_contract(t_arr *array);
+int					arr_push(t_arr *array, void *el);
+void					*arr_pop(t_arr *array);
+void					arr_clear_destroy(t_arr *array);
+
 #endif
