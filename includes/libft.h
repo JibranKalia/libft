@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 14:55:27 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 15:12:44 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@
 # define CHECK_MEM(a, b) CHECK((!a), b, "Out of Memory")
 # define CHECK_MEM1(a, b, c) CHECK1((!a), b, c, "Out of Memory")
 # define CHECK_MEM2(a, b, c, d) CHECK2((!a), b, c, d, "Out of Memory")
-# define DEBUG(M, ...) ft_log_debug(__FILE__, __LINE__, M, ##__VA_ARGS__)
 # define RETURN(a) return(a)
 
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
@@ -58,6 +57,12 @@
 # define STRJOIN_FREE_SRC1 1
 # define STRJOIN_FREE_SRC2 2
 # define STRJOIN_FREE_BOTH 3
+
+# ifdef NDEBUG
+#  define DEBUG(M, ...)
+# else
+#  define DEBUG(M, ...) ft_log_debug(__FILE__, __LINE__, M, ##__VA_ARGS__)
+# endif
 
 /*
 ** Ctype
