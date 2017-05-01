@@ -32,7 +32,7 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix str/, $(STR)) \
 				$(addprefix printf/, $(PRINTF)) \
 				$(addprefix trees/, $(TREES)) \
-				$(addprefix arr/, $(arr)) \
+				$(addprefix arr/, $(ARR)) \
 
 
 .PHONY = all clean fclean

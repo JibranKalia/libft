@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 10:23:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 13:37:58 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 13:46:25 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int		arr_set(t_arr *array, int i, void *el)
 	if (i > array->end)
 		array->end = i;
 	array->contents[i] = el;
+	return (0);
 }
 
 void	*arr_get(t_arr *array, int i)
