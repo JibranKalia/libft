@@ -6,15 +6,15 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 10:23:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 10:31:11 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 12:12:21 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	arr_set(t_arr *array, int i, void *el)
+int		arr_set(t_arr *array, int i, void *el)
 {
-	CHECK(i > array->max, return,"arr attempt to set past max");
+	CHECK(i > array->max, RETURN(-1),"arr attempt to set past max");
 	if (i > array->end)
 		array->end = i;
 	array->contents[i] = el;
@@ -22,7 +22,7 @@ void	arr_set(t_arr *array, int i, void *el)
 
 void	*arr_get(t_arr *array, int i)
 {
-	CHECK(i > array->max, return (NULL), "arr attempt to get past max");
+	CHECK(i > array->max, RETURN(NULL), "arr attempt to get past max");
 	return (array->contents[i]);
 }
 
