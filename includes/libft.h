@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 15:12:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 16:43:57 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -250,6 +250,7 @@ typedef struct		s_arr
 	size_t			element_size;
 	size_t			expand_rate;
 	void			**contents;
+	void			(*del)(void *elm);
 }					t_arr;
 
 int					arr_set(t_arr *array, int i, void *el);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arr_dtr.c                                       :+:      :+:    :+:   */
+/*   ft_arr_del.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 13:54:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 14:04:23 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/01 16:45:51 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,32 @@ void		arr_destroy(t_arr *array)
 	}
 }
 
-void		arr_del(t_arr *array)
+void	arr_del(t_arr *src)
+{
+	int		i;
+
+	if (src == 0)
+		return ;
+	if (src->max > 0)
+	{
+		if (src->del != 0)
+		{
+			i = -1;
+			while (++i < src->max)
+			{
+				if (src->contents[i] != NULL)
+				{
+					src->del(src->contents[i]);
+					free(src->contents[i]);
+				}
+			}
+		}
+	}
+	ft_bzero(src, sizeof(t_arr));
+	free(src);
+}
+
+void		arr_clear_destroy(t_arr *array)
 {
 	arr_clear(array);
 	arr_destroy(array);
