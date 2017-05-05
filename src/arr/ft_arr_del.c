@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 13:54:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 16:45:51 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/05 12:19:40 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void		arr_destroy(t_arr *array)
 	}
 }
 
-void	arr_del(t_arr *src)
+void		arr_del(t_arr *src)
 {
 	int		i;
 
