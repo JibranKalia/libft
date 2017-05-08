@@ -53,7 +53,6 @@ $(NAME): $(OBJ)
 
 clean:
 	@rm -f $(OBJ)
-	@echo "\033[32mLibft Object Files Removed\033[0m"
 
 fclean: clean
 	@rm -f $(NAME) 
