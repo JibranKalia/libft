@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/01 16:43:57 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/08 14:26:00 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@
 # define CHECK1(a,b,c,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;}}
 # define CHECK2(a,b,c,d,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;d;}}
 # define CHECK3(a,b,c,d,e,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;d;e;}}
+
+# define MEMCHECK(a) CHECK((!a), RETURN(-1), "Out of Memory");
+# define MEMCHECK1(a, b) CHECK1((!a), b, RETURN(-1), "Out of Memory");
+# define MEMCHECK2(a, b, c) CHECK2((!a), b, c, RETURN(-1), "Out of Memory");
+
 # define CHECK_MEM(a, b) CHECK((!a), b, "Out of Memory")
 # define CHECK_MEM1(a, b, c) CHECK1((!a), b, c, "Out of Memory")
 # define CHECK_MEM2(a, b, c, d) CHECK2((!a), b, c, d, "Out of Memory")
