@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 13:54:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/05 12:19:40 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/18 13:54:56 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void		arr_del(t_arr *src)
 		if (src->del != 0)
 		{
 			i = -1;
-			while (++i < src->max)
+			while (++i < src->end)
 			{
 				if (src->contents[i] != NULL)
 				{
@@ -59,6 +59,7 @@ void		arr_del(t_arr *src)
 			}
 		}
 	}
+	free(src->contents);
 	ft_bzero(src, sizeof(t_arr));
 	free(src);
 }
