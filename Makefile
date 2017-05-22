@@ -1,4 +1,4 @@
-NAME		:= libft.a
+NAME		:= libftprintf.a
 CFLAGS		+= -Wall -Wextra -Werror
 CFLAGS		+= -I includes/
 
