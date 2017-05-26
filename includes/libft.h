@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/22 16:05:23 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/05/25 23:00:10 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,14 @@
 # define STRJOIN_FREE_SRC1 1
 # define STRJOIN_FREE_SRC2 2
 # define STRJOIN_FREE_BOTH 3
+
+# define CLEAR "\033[0m"
+# define YELLOW "\033[33m"
+# define RED "\033[31m"
+# define GREEN "\033[32m"
+# define CYAN "\033[36m"
+# define WHITE "\033[37m"
+# define BLUE "\033[34m"
 
 # ifdef NDEBUG
 #  define DEBUG(M, ...)
