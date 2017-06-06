@@ -1,5 +1,5 @@
 CC			:= gcc
-TARGET		:= libftprintf.a
+TARGET		:= libft.a
 OBJDIR		:= obj
 SRCDIR		:= src
 INCDIR		:= includes
