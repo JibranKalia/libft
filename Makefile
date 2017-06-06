@@ -1,6 +1,12 @@
-NAME		:= libftprintf.a
+CC			:= gcc
+TARGET		:= libftprintf.a
+OBJDIR		:= obj
+SRCDIR		:= src
+INCDIR		:= includes
+OBJEXT		:= o
+SRCEXT		:= c
 CFLAGS		+= -Wall -Wextra -Werror
-CFLAGS		+= -I includes/
+INC         := -I $(INCDIR)
 
 CHR 		:= ft_putchar ft_putchar_fd
 LST			:= ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew ft_lstappend ft_lstfree
@@ -35,27 +41,48 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix trees/, $(TREES)) \
 				$(addprefix arr/, $(ARR)) \
 
-
 .PHONY = all clean fclean
 
 SRC			:= $(addprefix src/, $(addsuffix .c, $(FILES)))
+#OBJ 		:= $(addprefix $(OBJDIR)/, $(SRC:.$(SRCEXT)=.$(OBJEXT)))
 
-OBJ = $(SRC:.c=.o)
+OBJ			:= $(patsubst $(SRCDIR)/%, $(OBJDIR)/%, $(SRC:.$(SRCEXT)=.$(OBJEXT)))
 
-all: $(NAME)
 
-$(OBJ): %.o: %.c
-	@gcc -c $(CFLAGS) $< -o $@
+MAX			:=	$(words $(OBJ))
+n			:=	x
+increment	=	$1 x
+COUNTER		=	$(words $n)$(eval n := $(call increment,$n))
 
-$(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+
+all: obj $(TARGET)
+
+obj:
+	@mkdir -p $(OBJDIR)
+
+$(TARGET): $(OBJ)
+	@ar rcs $(TARGET) $(OBJ)
 	@echo "\033[32mCreated LIBFT\033[0m"
 
+$(OBJDIR)/%.$(OBJEXT): $(SRCDIR)/%.$(SRCEXT)
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+	@printf "\e[32mCompiling...(%d/%d)\e[0m\n" $(COUNTER) $(MAX)
+
+
 clean:
-	@rm -f $(OBJ)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	@rm -f $(NAME) 
+	@rm -f $(TARGET)
 	@echo "\033[32mRemoved LIBFT\033[0m"
 	
 re: fclean all
+
+out:
+	#@$(CC) $(CFLAGS) $(INCDEP) -MM $(SRCDIR)/$*.$(SRCEXT) > $(BUILDDIR)/$*.$(DEPEXT)
+	#@cp -f $(BUILDDIR)/$*.$(DEPEXT) $(BUILDDIR)/$*.$(DEPEXT).tmp
+	#@sed -e 's|.*:|$(BUILDDIR)/$*.$(OBJEXT):|' < $(BUILDDIR)/$*.$(DEPEXT).tmp > $(BUILDDIR)/$*.$(DEPEXT)
+	#@sed -e 's/.*://' -e 's/\\$$//' < $(BUILDDIR)/$*.$(DEPEXT).tmp | fmt -1 | sed -e 's/^ *//' -e 's/$$/:/' >> $(BUILDDIR)/$*.$(DEPEXT)
+	#@rm -f $(BUILDDIR)/$*.$(DEPEXT).tmp
+	@mkdir -p $(dir $@)
