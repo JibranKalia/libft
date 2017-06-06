@@ -46,7 +46,6 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 SRC			:= $(addprefix $(SRCDIR)/, $(addsuffix .$(SRCEXT), $(FILES)))
 OBJ			:= $(patsubst $(SRCDIR)/%, $(OBJDIR)/%, $(SRC:.$(SRCEXT)=.$(OBJEXT)))
 
-
 MAX			:=	$(words $(OBJ))
 n			:=	x
 increment	=	$1 x
@@ -59,14 +58,16 @@ obj:
 	@mkdir -p $(OBJDIR)
 
 $(TARGET): $(OBJ)
+	@printf "\r\e[32mCompiling...(%d/%d)[DONE]\n\e[0m" $(MAX) $(MAX)
+	@printf "\e[32mLinking and indexing... \e[0m"
 	@ar rcs $(TARGET) $(OBJ)
-	@echo "\n\033[32mCreated LIBFT\033[0m"
+	@printf "\e[32m[DONE]\e[0m\n"
+	@echo	"\033[32mCreated LIBFT\033[0m"
 
 $(OBJDIR)/%.$(OBJEXT): $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
 	@printf "\r\e[32mCompiling...(%d/%d)\e[0m" $(COUNTER) $(MAX)
-
 
 clean:
 	@rm -rf $(OBJDIR)
