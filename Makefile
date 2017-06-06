@@ -43,9 +43,7 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 
 .PHONY = all clean fclean
 
-SRC			:= $(addprefix src/, $(addsuffix .c, $(FILES)))
-#OBJ 		:= $(addprefix $(OBJDIR)/, $(SRC:.$(SRCEXT)=.$(OBJEXT)))
-
+SRC			:= $(addprefix $(SRCDIR)/, $(addsuffix .$(SRCEXT), $(FILES)))
 OBJ			:= $(patsubst $(SRCDIR)/%, $(OBJDIR)/%, $(SRC:.$(SRCEXT)=.$(OBJEXT)))
 
 
@@ -62,12 +60,12 @@ obj:
 
 $(TARGET): $(OBJ)
 	@ar rcs $(TARGET) $(OBJ)
-	@echo "\033[32mCreated LIBFT\033[0m"
+	@echo "\n\033[32mCreated LIBFT\033[0m"
 
 $(OBJDIR)/%.$(OBJEXT): $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
-	@printf "\e[32mCompiling...(%d/%d)\e[0m\n" $(COUNTER) $(MAX)
+	@printf "\r\e[32mCompiling...(%d/%d)\e[0m" $(COUNTER) $(MAX)
 
 
 clean:
@@ -78,11 +76,3 @@ fclean: clean
 	@echo "\033[32mRemoved LIBFT\033[0m"
 	
 re: fclean all
-
-out:
-	#@$(CC) $(CFLAGS) $(INCDEP) -MM $(SRCDIR)/$*.$(SRCEXT) > $(BUILDDIR)/$*.$(DEPEXT)
-	#@cp -f $(BUILDDIR)/$*.$(DEPEXT) $(BUILDDIR)/$*.$(DEPEXT).tmp
-	#@sed -e 's|.*:|$(BUILDDIR)/$*.$(OBJEXT):|' < $(BUILDDIR)/$*.$(DEPEXT).tmp > $(BUILDDIR)/$*.$(DEPEXT)
-	#@sed -e 's/.*://' -e 's/\\$$//' < $(BUILDDIR)/$*.$(DEPEXT).tmp | fmt -1 | sed -e 's/^ *//' -e 's/$$/:/' >> $(BUILDDIR)/$*.$(DEPEXT)
-	#@rm -f $(BUILDDIR)/$*.$(DEPEXT).tmp
-	@mkdir -p $(dir $@)
