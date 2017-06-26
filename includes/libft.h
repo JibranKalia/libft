@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/25 23:04:06 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/26 06:27:30 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@
 # include <stdlib.h>
 # include <errno.h>
 
-# define CHK(a, b) if(1){if(a){return(b);}}
-# define CHK1(a, b, c) if(1){if(a){b; return(c);}}
-# define CHK2(a, b, c, d) if(1){if(a){b; c; return(d);}}
-# define CHK3(a, b, c, d, e) if(1){if(a){b; c; d; return(e);}}
-# define CHK4(a, b, c, d, e, f) if(1){if(a){b; c; d; e; return(f);}}
+# define CHK(a, b) do{if(a){return(b);}}while(0)
+# define CHK1(a, b, c) do{if(a){b; return(c);}}while(0)
+# define CHK2(a, b, c, d) do{if(a){b; c; return(d);}}while(0)
+# define CHK3(a, b, c, d, e) do{if(a){b; c; d; return(e);}}while(0)
+# define CHK4(a, b, c, d, e, f) do{if(a){b; c; d; e; return(f);}}while(0)
 
 # define LOG(M,...) ft_log_err(__FILE__, __LINE__, M, ##__VA_ARGS__)
-# define CHECK(a,b,M,...) if(1){if(a){(LOG(M, ##__VA_ARGS__));b;}}
-# define CHECK1(a,b,c,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;}}
-# define CHECK2(a,b,c,d,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;d;}}
-# define CHECK3(a,b,c,d,e,M,...) if(1){if(a){LOG(M, ##__VA_ARGS__);b;c;d;e;}}
+# define CHECK(a,b,M,...) do{if(a){(LOG(M, ##__VA_ARGS__));b;}}while(0)
+# define CHECK1(a,b,c,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;}}while(0)
+# define CHECK2(a,b,c,d,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;d;}}while(0)
+# define CHECK3(a,b,c,d,e,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;d;e;}}while(0)
 
 # define MEMCHECK(a) CHECK((!a), RETURN(-1), "Out of Memory");
 # define MEMCHECK1(a, b) CHECK1((!a), b, RETURN(-1), "Out of Memory");
@@ -192,13 +192,7 @@ typedef struct		s_list
 
 t_list				*ft_lstnew(void const *src, size_t sze);
 void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
-void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt));
-void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
-void				ft_lstappend(t_list **alst, t_list *new);
-void				ft_lstfree(t_list **alst);
-
+void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t)); void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt)); t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt)); void				ft_lstdel(t_list**alst, void(*del)(void*, size_t)); void				ft_lstappend(t_list **alst, t_list *new); void				ft_lstfree(t_list **alst); 
 /*
 ** GETNEXTLINE
 */
