@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/05/25 23:00:10 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/25 20:51:43 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -278,4 +278,6 @@ int					arr_contract(t_arr *array);
 int					arr_push(t_arr *array, void *el);
 void				*arr_pop(t_arr *array);
 void				arr_del(t_arr *array);
+void				ft_qsort(void **v, int left, int right,
+		int (*comp)(const void *, const void *));
 #endif
