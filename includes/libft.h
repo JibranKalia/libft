@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/25 21:13:28 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/25 21:39:49 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,6 +166,7 @@ void				*ft_memchr(const void *src, int src_c, size_t len);
 void				*ft_memset(void *src, int c, size_t len);
 void				*ft_memalloc(size_t size);
 void				*ft_realloc(void *src, size_t srcsize, size_t newsize);
+void				ft_swap(void *a, void *b, size_t s);
 
 /*
 ** Conversion
