@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/28 09:40:04 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/28 10:47:44 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@
 # define CHECK(a,b,M,...) do{if(a){(LOG(M, ##__VA_ARGS__));b;}}while(0)
 # define CHECK1(a,b,c,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;}}while(0)
 # define CHECK2(a,b,c,d,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;d;}}while(0)
-# define CHECK3(a,b,c,d,e,M,...) do{if(a){LOG(M, ##__VA_ARGS__);b;c;d;e;}}while(0)
 
 # define MEMCHECK(a) CHECK((!a), RETURN(-1), "Out of Memory");
 # define MEMCHECK1(a, b) CHECK1((!a), b, RETURN(-1), "Out of Memory");
@@ -192,7 +191,12 @@ typedef struct		s_list
 
 t_list				*ft_lstnew(void const *src, size_t sze);
 void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t)); void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt)); t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt)); void				ft_lstdel(t_list**alst, void(*del)(void*, size_t)); void				ft_lstappend(t_list **alst, t_list *new); void				ft_lstfree(t_list **alst); 
+void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
+void				ft_lstiter(t_list *lst, void(*f)(t_list *cnt));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *cnt));
+void				ft_lstdel(t_list**alst, void(*del)(void*, size_t));
+void				ft_lstappend(t_list **alst, t_list *new);
+void				ft_lstfree(t_list **alst);
 /*
 ** GETNEXTLINE
 */
@@ -274,6 +278,6 @@ int					arr_push(t_arr *array, void *el);
 void				*arr_pop(t_arr *array);
 void				arr_del(t_arr *array);
 void				arr_reverse(t_arr *array);
-void				ft_qsort(void **v, int left, int right, 
+void				ft_qsort(void **v, int left, int right,
 		int (*comp) (void *, void *));
 #endif

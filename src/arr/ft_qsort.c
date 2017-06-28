@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arr_qsort.c                                     :+:      :+:    :+:   */
+/*   ft_qsort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/01 18:12:56 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/25 21:11:48 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/28 10:50:18 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static void	qsort_swap(void **v, int i, int j)
+void	qsort_swap(void **v, int i, int j)
 {
 	void *tmp;
 
@@ -27,13 +27,13 @@ void	ft_qsort(void **v, int left, int right, int (*comp) (void *, void *))
 	int	last;
 
 	if (left >= right)
-		return;
+		return ;
 	qsort_swap(v, left, (left + right) / 2);
 	last = left;
 	i = left + 1;
 	while (i <= right)
 	{
-		if ((*comp) (v[i], v[left]) < 0)
+		if (((*comp)(v[i], v[left])) < 0)
 			qsort_swap(v, ++last, i);
 		++i;
 	}
