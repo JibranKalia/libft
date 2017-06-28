@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/28 11:37:15 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/28 11:59:22 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -285,5 +285,5 @@ void				ft_qsort(void **v, int left, int right,
 ** Math
 */
 
-float	ft_sqrt(const float m);
+float				ft_sqrtf(const float m);
 #endif
