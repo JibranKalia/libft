@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/26 06:27:30 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/28 09:40:04 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,7 +197,7 @@ void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t)); void				ft_lsti
 ** GETNEXTLINE
 */
 
-# define GNL_BUFF_SIZE 1000
+# define GNL_BUFF_SIZE 1
 # define GNL_MAX_FD 3
 
 int					get_next_line(const int fd, char **line);
