@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/28 10:47:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/28 11:37:15 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -280,4 +280,10 @@ void				arr_del(t_arr *array);
 void				arr_reverse(t_arr *array);
 void				ft_qsort(void **v, int left, int right,
 		int (*comp) (void *, void *));
+
+/*
+** Math
+*/
+
+float	ft_sqrt(const float m);
 #endif

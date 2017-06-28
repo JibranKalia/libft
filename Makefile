@@ -31,6 +31,7 @@ TREES		:= btree_add_node btree_apply_inorder btree_apply_postorder btree_apply_p
 					btree_create_node
 ARR			:= ft_arr_create ft_arr_del ft_arr_get ft_arr_new ft_arr_pop ft_arr_push \
 					ft_arr_remove ft_arr_resize ft_arr_set ft_arr_reverse ft_qsort
+MATH		:= ft_sqrtf
 
 FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix ctype/, $(CTYPE)) \
@@ -41,6 +42,7 @@ FILES		:= $(addprefix chr/, $(CHR)) \
 				$(addprefix printf/, $(PRINTF)) \
 				$(addprefix trees/, $(TREES)) \
 				$(addprefix arr/, $(ARR)) \
+				$(addprefix math/, $(MATH)) \
 
 .PHONY = all clean fclean
 
