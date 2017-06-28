@@ -7,6 +7,7 @@ OBJEXT		:= o
 SRCEXT		:= c
 CFLAGS		+= -Wall -Wextra -Werror
 INC         := -I $(INCDIR)
+MAKEFLAGS	="-j $(grep -c ^processor /proc/cpuinfo)"
 
 CHR 		:= ft_putchar ft_putchar_fd
 LST			:= ft_lstadd ft_lstdel ft_lstdelone ft_lstiter ft_lstmap ft_lstnew ft_lstappend ft_lstfree
@@ -70,10 +71,20 @@ $(OBJDIR)/%.$(OBJEXT): $(SRCDIR)/%.$(SRCEXT)
 	@printf "\r\e[32mCompiling...(%d/%d)\e[0m" $(COUNTER) $(MAX)
 
 clean:
-	@rm -rf $(OBJDIR)
+	@if [ -e $(OBJDIR) ]; \
+		then \
+		rm -rf $(OBJDIR); \
+		printf "\r\033[32mRemoving libft-$(OBJDIR)\033[0m\033[K\n"; \
+	fi;
 
-fclean: clean
-	@rm -f $(TARGET)
-	@echo "\033[32mRemoved LIBFT\033[0m"
+fclean:
+	@$(MAKE) clean
+	@if [ -e $(TARGET) ]; \
+		then \
+		rm -f $(TARGET); \
+		printf "\r\033[32mRemoving $(TARGET)\033[0m\033[K\n"; \
+	fi;
 	
-re: fclean all
+re:
+	@$(MAKE) fclean
+	@$(MAKE) all
