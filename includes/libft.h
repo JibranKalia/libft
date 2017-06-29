@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/28 11:59:22 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/06/29 06:38:11 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,14 @@
 # define CHECK_MEM2(a, b, c, d) CHECK2((!a), b, c, d, "Out of Memory")
 # define RETURN(a) return(a)
 
+# define FAIL -1
+# define SUCCESS 0
+# define ABS(a) ((a) * (((a) > 0) * 2 - 1))
+# define EVEN(n) (n % 2 == 0)
+# define ODD(n) (n % 2 == 1)
 # define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 # define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
+# define DIFF(a, b) ((a) < (b) ? -1 : (a) > (b))
 # define ISDIGIT(a) (a >= 48 && a <= 57)
 # define ISUPPER(a) (a >= 'A' && a <= 'Z')
 # define ISLOWER(a) (a >= 'a' && a <= 'z')
