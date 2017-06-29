@@ -55,10 +55,7 @@ increment	=	$1 x
 COUNTER		=	$(words $n)$(eval n := $(call increment,$n))
 
 
-all: obj $(TARGET)
-
-obj:
-	@mkdir -p $(OBJDIR)
+all: $(TARGET)
 
 $(TARGET): $(OBJ)
 	@printf "\r\e[32mCompiling...(%d/%d)[DONE]\n\e[0m" $(MAX) $(MAX)
