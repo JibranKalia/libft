@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/22 16:58:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/06/29 06:38:11 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/02 10:04:10 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,7 +207,7 @@ void				ft_lstfree(t_list **alst);
 ** GETNEXTLINE
 */
 
-# define GNL_BUFF_SIZE 1
+# define GNL_BUFF_SIZE 4096
 # define GNL_MAX_FD 3
 
 int					get_next_line(const int fd, char **line);
